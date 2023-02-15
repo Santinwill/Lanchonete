@@ -16,7 +16,8 @@ uses
   UnitRelatorioMovimentacaoFinanceira in 'UnitRelatorioMovimentacaoFinanceira.pas' {FormRelatorioMovimentacaoFinanceira},
   UnitRelatorioDetalhesPagamento in 'UnitRelatorioDetalhesPagamento.pas' {FormRelatorioDetalhesPagamento},
   UnitRelatorioItens in 'UnitRelatorioItens.pas' {FormRelatorioItens},
-  UnitRelatorioVendasGarcom in 'UnitRelatorioVendasGarcom.pas' {FormRelatorioVendasGarcom};
+  UnitRelatorioVendasGarcom in 'UnitRelatorioVendasGarcom.pas' {FormRelatorioVendasGarcom},
+  UnitRelatorioMultiselecao in 'UnitRelatorioMultiselecao.pas' {FormRelatorioMultiselecao};
 
 {$R *.res}
 
@@ -24,11 +25,5 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFormPrincipal, FormPrincipal);
-  Application.CreateForm(TFormRelatorioBase, FormRelatorioBase);
-  Application.CreateForm(TFormRelatorioComandaData, FormRelatorioComandaData);
-  Application.CreateForm(TFormRelatorioMovimentacaoFinanceira, FormRelatorioMovimentacaoFinanceira);
-  Application.CreateForm(TFormRelatorioDetalhesPagamento, FormRelatorioDetalhesPagamento);
-  Application.CreateForm(TFormRelatorioItens, FormRelatorioItens);
-  Application.CreateForm(TFormRelatorioVendasGarcom, FormRelatorioVendasGarcom);
   Application.Run;
 end.

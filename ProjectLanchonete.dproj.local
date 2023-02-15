@@ -1,2 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject/>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2023/02/15 08:09:30.114,=C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\Unit1.pas</Transaction>
+    <Transaction>2023/02/15 08:43:18.425,C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\UnitRelatorioMultiselecao.dfm=C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\Unit1.dfm</Transaction>
+    <Transaction>2023/02/15 08:43:18.425,C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\UnitRelatorioMultiselecao.pas=C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

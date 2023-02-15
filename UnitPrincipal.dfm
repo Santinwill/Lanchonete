@@ -91,6 +91,10 @@ object FormPrincipal: TFormPrincipal
       object N3: TMenuItem
         Caption = '-'
       end
+      object Multiseleo1: TMenuItem
+        Caption = 'Multisele'#231#227'o'
+        OnClick = Multiseleo1Click
+      end
     end
   end
   object FDConnection: TFDConnection
