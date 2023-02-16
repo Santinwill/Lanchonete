@@ -105,7 +105,6 @@ object FormPrincipal: TFormPrincipal
       'User_Name=postgres'
       'Password=postgres'
       'Server=localhost')
-    Connected = True
     LoginPrompt = False
     BeforeConnect = FDConnectionBeforeConnect
     Left = 184

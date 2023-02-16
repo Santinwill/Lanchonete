@@ -67,8 +67,6 @@ begin
     begin
       sql := sql + ' and TIPO.NMCATEGORIA LIKE (' + QuotedStr('%' + ComboBoxCategoria.Text + '%') + ')';
     end;
-//        format(sql, );
-  ShowMessage(sql);
   FDQueryRelatorio.Close;
   FDQueryRelatorio.SQL.Text := sql;
   FDQueryRelatorio.Open;

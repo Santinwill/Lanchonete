@@ -108,7 +108,7 @@ end;
 
 procedure TFormPrincipal.FDConnectionBeforeConnect(Sender: TObject);
 begin
-  FDConnection.Params.LoadFromFile('.\ConfigConnection.txt');
+//  FDConnection.Params.LoadFromFile('.\ConfigConnection.txt');
 end;
 
 procedure TFormPrincipal.FechamentoComanda1Click(Sender: TObject);
@@ -131,8 +131,8 @@ end;
 
 procedure TFormPrincipal.FormCreate(Sender: TObject);
 begin
-  FDConnection.Connected := False;
-  FDConnection.Connected := True;
+//  FDConnection.Connected := False;
+//  FDConnection.Connected := True;
 end;
 
 procedure TFormPrincipal.Garom1Click(Sender: TObject);
