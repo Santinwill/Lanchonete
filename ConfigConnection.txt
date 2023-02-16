@@ -1,0 +1,6 @@
+Database=LANCHONETE
+DriverID=pG
+User_Name=postgres
+Password=postgres
+Server=localhost
+Port=5432

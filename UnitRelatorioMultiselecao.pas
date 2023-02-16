@@ -51,44 +51,23 @@ var
   sql: String;
 begin
   sql := base_sql;
-  if (EditComanda.Text <> '') or (EditItem.Text <> '')
-  or (ComboBoxGarcom.Text <> '') or (ComboBoxCategoria.Text <> '') then
-  begin
-    sql := sql + ' WHERE ';
     if EditComanda.Text <> '' then
     begin
-      sql := sql + ' COMANDA.IDCOMANDA = %S ';
-      sql := format(sql, [EditComanda.Text]);
-      if (EditItem.Text <> '') or (ComboBoxGarcom.Text <> '')
-      or (ComboBoxCategoria.Text <> '') then
-      begin
-        sql := sql + ' AND ';
-      end;
+      sql := sql + ' and COMANDA.IDCOMANDA = ' + EditComanda.Text;
     end;
     if EditItem.Text <> '' then
     begin
-      sql := sql + ' PRODUTO.IDPRODUTO = %S ';
-      sql := format(sql, [EditItem.Text]);
-      if (ComboBoxGarcom.Text <> '') or (ComboBoxCategoria.Text <> '') then
-      begin
-        sql := sql + ' AND ';
-      end;
+      sql := sql + ' and PRODUTO.IDPRODUTO = ' + EditItem.Text;
     end;
     if ComboBoxGarcom.Text <> '' then
     begin
-      sql := sql + ' GARCOM.NMGARCOM LIKE (%S) ';
-      sql := format(sql, [QuotedStr('%' + ComboBoxGarcom.Text + '%')]);
-      if ComboBoxCategoria.Text <> '' then
-      begin
-        sql := sql + ' AND ';
-      end;
+      sql := sql + ' and GARCOM.NMGARCOM LIKE (' + QuotedStr('%' + ComboBoxGarcom.Text + '%') + ')';
     end;
     if ComboBoxCategoria.Text <> '' then
     begin
-      sql := sql + ' TIPO.NMCATEGORIA LIKE ($S) ';
-      sql := format(sql, [QuotedStr('%' + ComboBoxCategoria.Text + '%')]);
+      sql := sql + ' and TIPO.NMCATEGORIA LIKE (' + QuotedStr('%' + ComboBoxCategoria.Text + '%') + ')';
     end;
-  end;
+//        format(sql, );
   ShowMessage(sql);
   FDQueryRelatorio.Close;
   FDQueryRelatorio.SQL.Text := sql;

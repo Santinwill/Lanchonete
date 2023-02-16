@@ -2,12 +2,9 @@ inherited FormRelatorioMultiselecao: TFormRelatorioMultiselecao
   Caption = 'Relatorio Multisele'#231#227'o'
   OnCreate = FormCreate
   OnShow = FormShow
-  ExplicitWidth = 628
-  ExplicitHeight = 423
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    ExplicitTop = -8
     object Label1: TLabel [0]
       Left = 16
       Top = 16
@@ -97,7 +94,6 @@ inherited FormRelatorioMultiselecao: TFormRelatorioMultiselecao
     end
   end
   inherited FDQueryRelatorio: TFDQuery
-    Active = True
     SQL.Strings = (
       'SELECT COMANDA.IDCOMANDA,'
       '         ITENCOMANDA.IDPRODUTO,'
@@ -115,6 +111,7 @@ inherited FormRelatorioMultiselecao: TFormRelatorioMultiselecao
       '    JOIN PRODUTO'
       '      ON ITENCOMANDA.IDPRODUTO = PRODUTO.IDPRODUTO'
       '    JOIN TIPO'
-      '      ON PRODUTO.IDTIPO = TIPO.IDTIPO')
+      '      ON PRODUTO.IDTIPO = TIPO.IDTIPO'
+      '   where 1 = 1')
   end
 end

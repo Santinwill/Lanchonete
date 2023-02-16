@@ -73,6 +73,7 @@ object FormRelatorioBase: TFormRelatorioBase
     Height = 270
     Align = alClient
     DataSource = DataSourceRelatorio
+    ReadOnly = True
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText

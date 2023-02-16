@@ -189,6 +189,7 @@ object FormPagamento: TFormPagamento
     Anchors = [akLeft, akTop, akBottom]
     DataSource = DataSourceItensComanda
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    ReadOnly = True
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -253,6 +254,7 @@ object FormPagamento: TFormPagamento
     Width = 364
     Height = 230
     DataSource = DataSourceItensPagos
+    ReadOnly = True
     TabOrder = 5
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText

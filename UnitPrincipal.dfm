@@ -15,6 +15,7 @@ object FormPrincipal: TFormPrincipal
   OldCreateOrder = False
   Position = poDesktopCenter
   WindowState = wsMaximized
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object MainMenu: TMainMenu
@@ -106,13 +107,12 @@ object FormPrincipal: TFormPrincipal
       'Server=localhost')
     Connected = True
     LoginPrompt = False
+    BeforeConnect = FDConnectionBeforeConnect
     Left = 184
     Top = 120
   end
   object FDPhysPgDriverLink: TFDPhysPgDriverLink
-    VendorLib = 
-      'C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\psqlodbc_1' +
-      '2_01_0000-x64\psqlodbc\libpq.dll'
+    VendorLib = '.\libpq.dll'
     Left = 184
     Top = 168
   end

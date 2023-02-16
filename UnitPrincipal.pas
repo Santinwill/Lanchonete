@@ -49,6 +49,8 @@ type
     procedure ItensCardapio1Click(Sender: TObject);
     procedure VendasGarom1Click(Sender: TObject);
     procedure Multiseleo1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FDConnectionBeforeConnect(Sender: TObject);
   private
     { Private declarations }
   public
@@ -104,6 +106,11 @@ begin
   form.Free;
 end;
 
+procedure TFormPrincipal.FDConnectionBeforeConnect(Sender: TObject);
+begin
+  FDConnection.Params.LoadFromFile('.\ConfigConnection.txt');
+end;
+
 procedure TFormPrincipal.FechamentoComanda1Click(Sender: TObject);
 var
   form: TFormPagamento;
@@ -120,6 +127,12 @@ begin
   form := TFormCadastroFormaPagamento.Create(Self);
   form.ShowModal;
   form.Free;
+end;
+
+procedure TFormPrincipal.FormCreate(Sender: TObject);
+begin
+  FDConnection.Connected := False;
+  FDConnection.Connected := True;
 end;
 
 procedure TFormPrincipal.Garom1Click(Sender: TObject);
