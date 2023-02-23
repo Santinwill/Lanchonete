@@ -105,13 +105,16 @@ object FormPrincipal: TFormPrincipal
       'User_Name=postgres'
       'Password=postgres'
       'Server=localhost')
+    Connected = True
     LoginPrompt = False
     BeforeConnect = FDConnectionBeforeConnect
     Left = 184
     Top = 120
   end
   object FDPhysPgDriverLink: TFDPhysPgDriverLink
-    VendorLib = '.\libpq.dll'
+    VendorLib = 
+      'C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\psqlodbc_1' +
+      '2_01_0000-x64\psqlodbc\libpq.dll'
     Left = 184
     Top = 168
   end

@@ -151,6 +151,9 @@ procedure TFormPagamento.Buscar;
 begin
   if EditCodigoComanda.Text = '' then
     Exit;
+  ButtonPagarTudo.Enabled := True;
+  ButtonPagarValorParcial.Enabled := True;
+  ButtonPagarItem.Enabled := False;
   FDQueryItensComanda.ParamByName('IDCOMANDA').AsInteger
   := StrToInt(EditCodigoComanda.Text);
   FDQueryItensPagos.ParamByName('IDCOMANDA').AsInteger
@@ -181,10 +184,10 @@ begin
   end;
   if (StrToFloat(EditValorPagar.Text) = 0) then
   begin
-    ButtonFecharComanda.Visible := True;
+    ButtonFecharComanda.Enabled := True;
   end
   else
-    ButtonFecharComanda.Visible := False;
+    ButtonFecharComanda.Enabled := False;
 end;
 
 procedure TFormPagamento.ButtonBuscarComandaClick(Sender: TObject);
@@ -236,10 +239,16 @@ var
 begin
   if FDQueryItensComanda.IsEmpty then
     Exit;
+
   if MessageDlg('Alterar item para pago?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
   begin
     idcomanda := FDQueryItensComanda.FieldByName('IDCOMANDA').AsInteger;
     valor := FDQueryItensComanda.FieldByName('VLVENDA').AsFloat;
+    if valor > StrToFloat(EditValorPagar.Text) then
+    begin
+      ShowMessage('Operação inválida');
+      Exit;
+    end;
     formapgmt := 0;
     form := TFormCadastroFormaPagamento.Create(Self);
     form.Base_FiltrosExtras := ' FORMAPGMT.IDSTATUSFORMAPGMT = 1 ';
@@ -336,6 +345,7 @@ end;
 procedure TFormPagamento.DBGridItensComandaCellClick(Column: TColumn);
 begin
   iditem := DBGridItensComanda.Fields[5].value;
+  ButtonPagarItem.Enabled := True;
 end;
 
 procedure TFormPagamento.Desconto(_Aidcomanda, _AtotalComanda,

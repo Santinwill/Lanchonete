@@ -145,6 +145,7 @@ object FormPagamento: TFormPagamento
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = 'Quitar Comanda'
+      Enabled = False
       TabOrder = 0
       OnClick = ButtonPagarTudoClick
     end
@@ -155,6 +156,7 @@ object FormPagamento: TFormPagamento
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = 'Pagar Item'
+      Enabled = False
       TabOrder = 1
       OnClick = ButtonPagarItemClick
     end
@@ -175,8 +177,8 @@ object FormPagamento: TFormPagamento
       Width = 100
       Height = 25
       Caption = 'Fechar Comanda'
+      Enabled = False
       TabOrder = 3
-      Visible = False
       WordWrap = True
       OnClick = ButtonFecharComandaClick
     end
@@ -284,6 +286,7 @@ object FormPagamento: TFormPagamento
     Width = 113
     Height = 25
     Caption = 'Pagar Valor Parcial'
+    Enabled = False
     TabOrder = 8
     OnClick = ButtonPagarValorParcialClick
   end
