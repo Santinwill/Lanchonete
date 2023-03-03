@@ -52,4 +52,139 @@ inherited FormRelatorioDetalhesPagamento: TFormRelatorioDetalhesPagamento
       Size = 2
     end
   end
+  inherited ppReport1: TppReport
+    DataPipelineName = 'ppDBPipeline1'
+    inherited ppHeaderBand1: TppHeaderBand
+      inherited ppLabel1: TppLabel
+        SaveOrder = -1
+        Caption = 'Detalhes Pagamento'
+        mmLeft = 71173
+        mmWidth = 54769
+        LayerName = Foreground
+      end
+      inherited ppLine1: TppLine
+        LayerName = Foreground
+      end
+      inherited ppLine2: TppLine
+        LayerName = Foreground
+      end
+      object ppLabel5: TppLabel
+        UserName = 'Label2'
+        AutoSize = False
+        Caption = 'Forma Pagamento'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4763
+        mmLeft = 1301
+        mmTop = 12172
+        mmWidth = 55298
+        BandType = 0
+        LayerName = Foreground
+      end
+      object ppLabel6: TppLabel
+        UserName = 'Label3'
+        AutoSize = False
+        Caption = 'Valor'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4763
+        mmLeft = 57416
+        mmTop = 12171
+        mmWidth = 20000
+        BandType = 0
+        LayerName = Foreground
+      end
+    end
+    inherited ppDetailBand1: TppDetailBand
+      object ppDBText1: TppDBText
+        UserName = 'DBText1'
+        DataField = 'nmformapgmt'
+        DataPipeline = ppDBPipeline1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'ppDBPipeline1'
+        mmHeight = 4763
+        mmLeft = 1323
+        mmTop = 1323
+        mmWidth = 55298
+        BandType = 4
+        LayerName = Foreground
+      end
+      object ppDBText2: TppDBText
+        UserName = 'DBText2'
+        DataField = 'vlpago'
+        DataPipeline = ppDBPipeline1
+        DisplayFormat = 'R$#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'ppDBPipeline1'
+        mmHeight = 4763
+        mmLeft = 57416
+        mmTop = 1323
+        mmWidth = 20000
+        BandType = 4
+        LayerName = Foreground
+      end
+    end
+    inherited ppFooterBand1: TppFooterBand
+      inherited ppSystemVariable1: TppSystemVariable
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppLabel2: TppLabel
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppSystemVariable2: TppSystemVariable
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppLabel3: TppLabel
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppLabel4: TppLabel
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppSystemVariable3: TppSystemVariable
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+    end
+  end
+  inherited ppDBPipeline1: TppDBPipeline
+    object ppDBPipeline1ppField1: TppField
+      FieldAlias = 'nmformapgmt'
+      FieldName = 'nmformapgmt'
+      FieldLength = 20
+      DisplayWidth = 20
+      Position = 0
+    end
+    object ppDBPipeline1ppField2: TppField
+      Alignment = taRightJustify
+      FieldAlias = 'vlpago'
+      FieldName = 'vlpago'
+      FieldLength = 2
+      DataType = dtDouble
+      DisplayWidth = 11
+      Position = 1
+    end
+  end
 end

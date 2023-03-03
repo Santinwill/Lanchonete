@@ -9,7 +9,8 @@ uses
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, Vcl.StdCtrls, Vcl.ComCtrls,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids,
-  Vcl.ExtCtrls;
+  Vcl.ExtCtrls, ppCtrls, ppDB, ppDBPipe, ppParameter, ppDesignLayer, ppVar,
+  ppBands, ppPrnabl, ppClass, ppCache, ppComm, ppRelatv, ppProd, ppReport;
 
 type
   TFormRelatorioComandaData = class(TFormRelatorioBase)
@@ -20,6 +21,12 @@ type
     FDQueryRelatorioidcomanda: TLargeintField;
     FDQueryRelatorionmgarcom: TWideStringField;
     FDQueryRelatoriodtcomanda: TDateField;
+    ppLabel5: TppLabel;
+    ppDBText1: TppDBText;
+    ppLabel6: TppLabel;
+    ppDBText2: TppDBText;
+    ppLabel7: TppLabel;
+    ppDBText3: TppDBText;
     procedure ButtonBuscarClick(Sender: TObject);
     procedure ButtonCancelarClick(Sender: TObject);
   private
