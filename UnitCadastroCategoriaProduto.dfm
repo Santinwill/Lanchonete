@@ -3,11 +3,9 @@ inherited FormCadastroCategoriaProduto: TFormCadastroCategoriaProduto
   PixelsPerInch = 96
   TextHeight = 13
   inherited PageControl: TPageControl
+    ActivePage = TabSheetCadastro
     inherited TabSheetConsulta: TTabSheet
       inherited Panel2: TPanel
-        inherited ButtonImprimir: TButton
-          Visible = False
-        end
         inherited ButtonSelecionar: TButton
           Visible = False
         end
@@ -44,10 +42,6 @@ inherited FormCadastroCategoriaProduto: TFormCadastroCategoriaProduto
       end
     end
     inherited TabSheetCadastro: TTabSheet
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label1: TLabel [0]
         Left = 16
         Top = 16

@@ -5,6 +5,7 @@ inherited FormCadastroCardapio: TFormCadastroCardapio
   PixelsPerInch = 96
   TextHeight = 13
   inherited PageControl: TPageControl
+    ActivePage = TabSheetCadastro
     inherited TabSheetConsulta: TTabSheet
       inherited Panel1: TPanel
         inherited LabelBuscar: TLabel
@@ -167,7 +168,7 @@ inherited FormCadastroCardapio: TFormCadastroCardapio
       end
       object cxDBTextEdit2: TcxDBTextEdit
         Left = 24
-        Top = 144
+        Top = 141
         DataBinding.DataField = 'nmcategoria'
         DataBinding.DataSource = DataSource
         Properties.ReadOnly = True

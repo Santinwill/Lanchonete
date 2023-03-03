@@ -73,11 +73,13 @@ begin
   begin
     FDQuery.FieldByName('FLSITUACAO').AsInteger := 0;
     ShowMessage('Alterado para Inativo.');
+    cxDBTextEdit3.Text := 'Inativo';
   end
   else
   begin
     FDQuery.FieldByName('FLSITUACAO').AsInteger := 1;
     ShowMessage('Alterado para Ativo.');
+    cxDBTextEdit3.Text := 'Ativo';
   end;
 end;
 
@@ -94,6 +96,7 @@ begin
   begin
     FDQuery.FieldByName('IDTIPO').AsInteger
     := form.FDQuery.FieldByName('IDTIPO').AsInteger;
+    cxDBTextEdit2.Text := form.FDQuery.FieldByName('NMCATEGORIA').AsString;
   end;
   form.Free;
 end;

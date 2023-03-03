@@ -57,11 +57,13 @@ begin
   begin
     FDQuery.FieldByName('FLSITUACAO').AsInteger := 0;
     ShowMessage('Alterado para Inativo.');
+    cxDBTextEdit2.Text := 'Inativo';
   end
   else
   begin
     FDQuery.FieldByName('FLSITUACAO').AsInteger := 1;
     ShowMessage('Alterado para Ativo.');
+    cxDBTextEdit2.Text := 'Ativo';
   end;
 end;
 

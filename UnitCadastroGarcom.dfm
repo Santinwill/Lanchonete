@@ -1,8 +1,11 @@
 inherited FormCadastroGarcom: TFormCadastroGarcom
   Caption = 'Cadastro Gar'#231'om'
+  ExplicitWidth = 730
+  ExplicitHeight = 518
   PixelsPerInch = 96
   TextHeight = 13
   inherited PageControl: TPageControl
+    ActivePage = TabSheetCadastro
     inherited TabSheetConsulta: TTabSheet
       inherited Panel2: TPanel
         inherited ButtonSelecionar: TButton
@@ -43,10 +46,6 @@ inherited FormCadastroGarcom: TFormCadastroGarcom
       end
     end
     inherited TabSheetCadastro: TTabSheet
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label1: TLabel [0]
         Left = 16
         Top = 16

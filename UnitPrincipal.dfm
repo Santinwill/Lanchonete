@@ -113,8 +113,8 @@ object FormPrincipal: TFormPrincipal
   end
   object FDPhysPgDriverLink: TFDPhysPgDriverLink
     VendorLib = 
-      'C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\psqlodbc_1' +
-      '2_01_0000-x64\psqlodbc\libpq.dll'
+      'C:\Users\des42\Desktop\ProjetosGit\Lanchonete\psqlodbc_12_01_000' +
+      '0-x64\psqlodbc\libpq.dll'
     Left = 184
     Top = 168
   end

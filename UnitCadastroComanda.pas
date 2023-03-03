@@ -104,6 +104,7 @@ begin
   begin
     FDQuery.FieldByName('IDGARCOM').AsInteger
     := form.FDQuery.FieldByName('IDGARCOM').AsInteger;
+    cxDBTextEdit1.Text := Form.FDQuery.FieldByName('NMGARCOM').AsString;
   end;
   form.Free;
 end;
