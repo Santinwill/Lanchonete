@@ -18,6 +18,18 @@ object FormPrincipal: TFormPrincipal
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
+  object LabelUsuario: TLabel
+    Left = 0
+    Top = 0
+    Width = 443
+    Height = 13
+    Align = alTop
+    Alignment = taRightJustify
+    Caption = 'LabelUsuario'
+    ExplicitLeft = 256
+    ExplicitTop = 40
+    ExplicitWidth = 61
+  end
   object MainMenu: TMainMenu
     Left = 184
     Top = 65

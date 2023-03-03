@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
   FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client, FireDAC.Phys.PG,
-  FireDAC.Phys.PGDef;
+  FireDAC.Phys.PGDef, Vcl.StdCtrls;
 
 type
   TFormPrincipal = class(TForm)
@@ -36,6 +36,7 @@ type
     VendasGarom1: TMenuItem;
     N3: TMenuItem;
     Multiseleo1: TMenuItem;
+    LabelUsuario: TLabel;
     procedure Garom2Click(Sender: TObject);
     procedure FormasdePagamento2Click(Sender: TObject);
     procedure Garom1Click(Sender: TObject);
@@ -68,7 +69,8 @@ uses UnitCadastroGarcom, UnitCadastroFormaPagamento,
   UnitCadastroCategoriaProduto, UnitCadastroCardapio, UnitCadastroComanda,
   UnitControleComanda, UnitPagamento, UnitRelatorioComandaData,
   UnitRelatorioMovimentacaoFinanceira, UnitRelatorioDetalhesPagamento,
-  UnitRelatorioItens, UnitRelatorioVendasGarcom, UnitRelatorioMultiselecao;
+  UnitRelatorioItens, UnitRelatorioVendasGarcom, UnitRelatorioMultiselecao,
+  UnitLogin;
 
 procedure TFormPrincipal.Comanda1Click(Sender: TObject);
 var
@@ -130,9 +132,22 @@ begin
 end;
 
 procedure TFormPrincipal.FormCreate(Sender: TObject);
+var
+  FormLogin :TFormLogin;
 begin
 //  FDConnection.Connected := False;
 //  FDConnection.Connected := True;
+  FormLogin := TFormLogin.Create(Owner);
+  if FormLogin.ShowModal = mrOk then
+  begin
+    LabelUsuario.Caption := FormLogin.FDQuerylogin.FieldByName('NMUSUARUIO').AsString;
+    FormLogin.Free;
+  end
+  else
+  begin
+    Application.Terminate;
+  end;
+
 end;
 
 procedure TFormPrincipal.Garom1Click(Sender: TObject);

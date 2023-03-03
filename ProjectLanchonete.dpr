@@ -17,7 +17,8 @@ uses
   UnitRelatorioDetalhesPagamento in 'UnitRelatorioDetalhesPagamento.pas' {FormRelatorioDetalhesPagamento},
   UnitRelatorioItens in 'UnitRelatorioItens.pas' {FormRelatorioItens},
   UnitRelatorioVendasGarcom in 'UnitRelatorioVendasGarcom.pas' {FormRelatorioVendasGarcom},
-  UnitRelatorioMultiselecao in 'UnitRelatorioMultiselecao.pas' {FormRelatorioMultiselecao};
+  UnitRelatorioMultiselecao in 'UnitRelatorioMultiselecao.pas' {FormRelatorioMultiselecao},
+  UnitLogin in 'UnitLogin.pas' {FormLogin};
 
 {$R *.res}
 
