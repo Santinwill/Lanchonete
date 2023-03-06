@@ -8,7 +8,9 @@ uses
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, ppDB, ppDBPipe,
+  ppParameter, ppDesignLayer, ppVar, ppBands, ppCtrls, ppPrnabl, ppClass,
+  ppCache, ppComm, ppRelatv, ppProd, ppReport;
 
 type
   TFormRelatorioMultiselecao = class(TFormRelatorioBase)
@@ -22,16 +24,35 @@ type
     ComboBoxCategoria: TComboBox;
     ButtonSelecionarComanda: TButton;
     ButtonSelecionarItem: TButton;
+    FDQueryRelatorioidcomanda: TLargeintField;
+    FDQueryRelatorioidproduto: TLargeintField;
+    FDQueryRelatoriodtaddcomanda: TDateField;
+    FDQueryRelatorionmproduto: TWideStringField;
+    FDQueryRelatorioidgarcom: TLargeintField;
+    FDQueryRelatorionmgarcom: TWideStringField;
+    FDQueryRelatorioidtipo: TLargeintField;
+    FDQueryRelatorionmcategoria: TWideStringField;
+    ButtonLimparCampos: TButton;
+    ppLabel5: TppLabel;
+    ppDBText1: TppDBText;
+    ppLabel6: TppLabel;
+    ppDBText2: TppDBText;
+    ppLabel7: TppLabel;
+    ppDBText3: TppDBText;
+    ppLabel8: TppLabel;
+    ppDBText4: TppDBText;
     procedure FormShow(Sender: TObject);
     procedure ButtonSelecionarComandaClick(Sender: TObject);
     procedure ButtonSelecionarItemClick(Sender: TObject);
     procedure ButtonBuscarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure ButtonLimparCamposClick(Sender: TObject);
   private
     { Private declarations }
     procedure garcom;
     procedure categoria;
     procedure Buscar;
+    procedure limpar;
   public
     base_sql: string;
     { Public declarations }
@@ -75,6 +96,11 @@ end;
 procedure TFormRelatorioMultiselecao.ButtonBuscarClick(Sender: TObject);
 begin
    Buscar;
+end;
+
+procedure TFormRelatorioMultiselecao.ButtonLimparCamposClick(Sender: TObject);
+begin
+  limpar;
 end;
 
 procedure TFormRelatorioMultiselecao.ButtonSelecionarComandaClick(
@@ -139,6 +165,7 @@ end;
 procedure TFormRelatorioMultiselecao.FormCreate(Sender: TObject);
 begin
   base_sql := FDQueryRelatorio.SQL.Text;
+  limpar;
 end;
 
 procedure TFormRelatorioMultiselecao.FormShow(Sender: TObject);
@@ -175,6 +202,16 @@ begin
     FDQueryGarcom.Free;
     DataSourceGarcom.Free;
   end;
+end;
+
+procedure TFormRelatorioMultiselecao.limpar;
+begin
+  EditComanda.Text := '-1';
+  EditItem.Text := '';
+  ComboBoxGarcom.ItemIndex := 0;
+  ComboBoxCategoria.ItemIndex := 0;
+  Buscar;
+  EditComanda.Text := '';
 end;
 
 end.

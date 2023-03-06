@@ -26,8 +26,7 @@ object FormPrincipal: TFormPrincipal
     Align = alTop
     Alignment = taRightJustify
     Caption = 'LabelUsuario'
-    ExplicitLeft = 256
-    ExplicitTop = 40
+    ExplicitLeft = 382
     ExplicitWidth = 61
   end
   object MainMenu: TMainMenu

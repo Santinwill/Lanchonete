@@ -304,6 +304,16 @@ object FormRelatorioBase: TFormRelatorioBase
         BandType = 8
         LayerName = Foreground
       end
+      object ppLine3: TppLine
+        UserName = 'Line3'
+        Weight = 0.750000000000000000
+        mmHeight = 1058
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 197644
+        BandType = 8
+        LayerName = Foreground
+      end
     end
     object ppDesignLayers1: TppDesignLayers
       object ppDesignLayer1: TppDesignLayer

@@ -9,7 +9,8 @@ uses
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, Vcl.StdCtrls, Vcl.Menus,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids,
-  Vcl.ExtCtrls;
+  Vcl.ExtCtrls, ppCtrls, ppDB, ppDBPipe, ppParameter, ppDesignLayer, ppVar,
+  ppBands, ppPrnabl, ppClass, ppCache, ppComm, ppRelatv, ppProd, ppReport;
 
 type
   TFormRelatorioItens = class(TFormRelatorioBase)
@@ -18,6 +19,10 @@ type
     FDQueryRelatorionmproduto: TWideStringField;
     FDQueryRelatoriovlvenda: TBCDField;
     LabelIten: TLabel;
+    ppLabel5: TppLabel;
+    ppDBText1: TppDBText;
+    ppLabel6: TppLabel;
+    ppDBText2: TppDBText;
     procedure ButtonBuscarClick(Sender: TObject);
     procedure ButtonCancelarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -46,17 +51,20 @@ begin
     sql := sql + '    WHERE TIPO.FLSITUACAO = 1 ' +
                  '      AND PRODUTO.FLSITUACAO = 1 ';
     LabelIten.Caption := 'Itens Ativos';
+    ppLabel1.Caption := 'Itens Ativos Cardápio';
   end;
   if CheckBoxInativos.Checked then
   begin
     sql := sql + '    WHERE TIPO.FLSITUACAO = 0 ' +
                  '       OR PRODUTO.FLSITUACAO = 0 ';
     LabelIten.Caption := 'Itens Inativos';
+    ppLabel1.Caption := 'Itens Inativos Cardápio';
   end;
   if (CheckBoxAtivo.Checked) and (CheckBoxInativos.Checked) then
   begin
     sql := base;
-    LabelIten.Caption := 'Todos os Itens';
+    LabelIten.Caption := 'Itens Ativos e Inativos';
+    ppLabel1.Caption := 'Itens Ativos e Inativos Cardápio';
   end;
   sql := sql + ' ORDER BY NMPRODUTO ';
   FDQueryRelatorio.Close;
@@ -79,6 +87,8 @@ procedure TFormRelatorioItens.FormCreate(Sender: TObject);
 begin
   inherited;
   base := FDQueryRelatorio.SQL.Text;
+  CheckBoxAtivo.Checked := True;
+  Buscar;
 end;
 
 end.

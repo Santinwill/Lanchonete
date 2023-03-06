@@ -39,6 +39,7 @@ type
     ppLabel3: TppLabel;
     ppLabel4: TppLabel;
     ppSystemVariable3: TppSystemVariable;
+    ppLine3: TppLine;
     procedure ButtonCancelarClick(Sender: TObject);
     procedure ButtonImprimirClick(Sender: TObject);
   private

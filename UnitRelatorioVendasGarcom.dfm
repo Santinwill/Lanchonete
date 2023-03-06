@@ -1,10 +1,10 @@
 inherited FormRelatorioVendasGarcom: TFormRelatorioVendasGarcom
   Caption = 'Relatorio Vendas Garcom'
+  ExplicitWidth = 628
+  ExplicitHeight = 423
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    ExplicitLeft = -8
-    ExplicitTop = 24
     object Label1: TLabel [0]
       Left = 8
       Top = 11
@@ -137,6 +137,193 @@ inherited FormRelatorioVendasGarcom: TFormRelatorioVendasGarcom
       DisplayWidth = 15
       FieldName = 'dtcomanda'
       Origin = 'dtcomanda'
+    end
+  end
+  inherited ppReport1: TppReport
+    DataPipelineName = 'ppDBPipeline1'
+    inherited ppHeaderBand1: TppHeaderBand
+      inherited ppLabel1: TppLabel
+        SaveOrder = -1
+        Caption = 'Relat'#243'rio Vendas Por Gar'#231'om'
+        mmLeft = 60325
+        mmWidth = 78317
+        LayerName = Foreground
+      end
+      inherited ppLine1: TppLine
+        LayerName = Foreground
+      end
+      inherited ppLine2: TppLine
+        LayerName = Foreground
+      end
+      object ppLabel5: TppLabel
+        UserName = 'Label2'
+        AutoSize = False
+        Caption = 'Produto'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4763
+        mmLeft = 1323
+        mmTop = 12700
+        mmWidth = 60000
+        BandType = 0
+        LayerName = Foreground
+      end
+      object ppLabel6: TppLabel
+        UserName = 'Label3'
+        AutoSize = False
+        Caption = 'Quantidade'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4763
+        mmLeft = 62443
+        mmTop = 12698
+        mmWidth = 22000
+        BandType = 0
+        LayerName = Foreground
+      end
+      object ppLabel7: TppLabel
+        UserName = 'Label4'
+        AutoSize = False
+        Caption = 'Data'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4763
+        mmLeft = 85991
+        mmTop = 12700
+        mmWidth = 35000
+        BandType = 0
+        LayerName = Foreground
+      end
+    end
+    inherited ppDetailBand1: TppDetailBand
+      object ppDBText1: TppDBText
+        UserName = 'DBText1'
+        DataField = 'nmproduto'
+        DataPipeline = ppDBPipeline1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'ppDBPipeline1'
+        mmHeight = 4763
+        mmLeft = 1323
+        mmTop = 1058
+        mmWidth = 60000
+        BandType = 4
+        LayerName = Foreground
+      end
+      object ppDBText2: TppDBText
+        UserName = 'DBText2'
+        DataField = 'quantidade'
+        DataPipeline = ppDBPipeline1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBPipeline1'
+        mmHeight = 4763
+        mmLeft = 62444
+        mmTop = 1058
+        mmWidth = 22000
+        BandType = 4
+        LayerName = Foreground
+      end
+      object ppDBText3: TppDBText
+        UserName = 'DBText3'
+        DataField = 'dtcomanda'
+        DataPipeline = ppDBPipeline1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'ppDBPipeline1'
+        mmHeight = 4763
+        mmLeft = 85991
+        mmTop = 1058
+        mmWidth = 35000
+        BandType = 4
+        LayerName = Foreground
+      end
+    end
+    inherited ppFooterBand1: TppFooterBand
+      inherited ppSystemVariable1: TppSystemVariable
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppLabel2: TppLabel
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppSystemVariable2: TppSystemVariable
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppLabel3: TppLabel
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppLabel4: TppLabel
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppSystemVariable3: TppSystemVariable
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppLine3: TppLine
+        LayerName = Foreground
+      end
+    end
+  end
+  inherited ppDBPipeline1: TppDBPipeline
+    object ppDBPipeline1ppField1: TppField
+      FieldAlias = 'nmgarcom'
+      FieldName = 'nmgarcom'
+      FieldLength = 50
+      DisplayWidth = 30
+      Position = 0
+    end
+    object ppDBPipeline1ppField2: TppField
+      FieldAlias = 'nmproduto'
+      FieldName = 'nmproduto'
+      FieldLength = 50
+      DisplayWidth = 40
+      Position = 1
+    end
+    object ppDBPipeline1ppField3: TppField
+      FieldAlias = 'quantidade'
+      FieldName = 'quantidade'
+      FieldLength = 0
+      DataType = dtLargeInt
+      DisplayWidth = 10
+      Position = 2
+    end
+    object ppDBPipeline1ppField4: TppField
+      FieldAlias = 'dtcomanda'
+      FieldName = 'dtcomanda'
+      FieldLength = 0
+      DataType = dtDate
+      DisplayWidth = 15
+      Position = 3
     end
   end
 end
