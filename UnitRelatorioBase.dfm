@@ -192,7 +192,7 @@ object FormRelatorioBase: TFormRelatorioBase
       end
     end
     object ppDetailBand1: TppDetailBand
-      Background1.Brush.Style = bsClear
+      Background1.Brush.Color = cl3DLight
       Background2.Brush.Style = bsClear
       mmBottomOffset = 0
       mmHeight = 7408

@@ -2,10 +2,13 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2023/02/15 08:09:30.000.114,=C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\Unit1.pas</Transaction>
-    <Transaction>2023/02/15 08:43:18.000.425,C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\UnitRelatorioMultiselecao.dfm=C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\Unit1.dfm</Transaction>
-    <Transaction>2023/02/15 08:43:18.000.425,C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\UnitRelatorioMultiselecao.pas=C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\Unit1.pas</Transaction>
-    <Transaction>2023/03/03 09:28:55.175,=C:\Users\des42\Desktop\ProjetosGit\Lanchonete\Unit1.pas</Transaction>
-    <Transaction>2023/03/03 09:29:30.792,C:\Users\des42\Desktop\ProjetosGit\Lanchonete\UnitLogin.dfm=C:\Users\des42\Desktop\ProjetosGit\Lanchonete\Unit1.dfm</Transaction>
-    <Transaction>2023/03/03 09:29:30.792,C:\Users\des42\Desktop\ProjetosGit\Lanchonete\UnitLogin.pas=C:\Users\des42\Desktop\ProjetosGit\Lanchonete\Unit1.pas</Transaction>
+    <Transaction>2023/02/15 08:43:18.000.425,C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\Unit1.pas=C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\UnitRelatorioMultiselecao.pas</Transaction>
+    <Transaction>2023/02/15 08:43:18.000.425,C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\Unit1.dfm=C:\Users\Estagiario02\Desktop\projetosGit\lanchoneteD\UnitRelatorioMultiselecao.dfm</Transaction>
+    <Transaction>2023/03/03 09:28:55.000.175,=C:\Users\des42\Desktop\ProjetosGit\Lanchonete\Unit1.pas</Transaction>
+    <Transaction>2023/03/03 09:29:30.000.792,C:\Users\des42\Desktop\ProjetosGit\Lanchonete\Unit1.dfm=C:\Users\des42\Desktop\ProjetosGit\Lanchonete\UnitLogin.dfm</Transaction>
+    <Transaction>2023/03/03 09:29:30.000.792,C:\Users\des42\Desktop\ProjetosGit\Lanchonete\Unit1.pas=C:\Users\des42\Desktop\ProjetosGit\Lanchonete\UnitLogin.pas</Transaction>
+    <Transaction>2023/03/06 10:45:03.694,=C:\Users\des42\Desktop\ProjetosGit\Lanchonete\Unit1.pas</Transaction>
+    <Transaction>2023/03/06 10:45:55.267,C:\Users\des42\Desktop\ProjetosGit\Lanchonete\UnitRelatorioItensComanda.pas=C:\Users\des42\Desktop\ProjetosGit\Lanchonete\Unit1.pas</Transaction>
+    <Transaction>2023/03/06 10:45:55.267,C:\Users\des42\Desktop\ProjetosGit\Lanchonete\UnitRelatorioItensComanda.dfm=C:\Users\des42\Desktop\ProjetosGit\Lanchonete\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>

@@ -11,7 +11,9 @@ inherited FormRelatorioDetalhesPagamento: TFormRelatorioDetalhesPagamento
       Caption = 'C'#243'digo da Comanda'
     end
     inherited ButtonBuscar: TButton
+      Top = 42
       OnClick = ButtonBuscarClick
+      ExplicitTop = 42
     end
     object EditCodigoComanda: TEdit
       Left = 402

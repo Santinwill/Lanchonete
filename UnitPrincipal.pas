@@ -37,6 +37,8 @@ type
     N3: TMenuItem;
     Multiseleo1: TMenuItem;
     LabelUsuario: TLabel;
+    N4: TMenuItem;
+    ItensComanda1: TMenuItem;
     procedure Garom2Click(Sender: TObject);
     procedure FormasdePagamento2Click(Sender: TObject);
     procedure Garom1Click(Sender: TObject);
@@ -52,6 +54,7 @@ type
     procedure Multiseleo1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FDConnectionBeforeConnect(Sender: TObject);
+    procedure ItensComanda1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -70,7 +73,7 @@ uses UnitCadastroGarcom, UnitCadastroFormaPagamento,
   UnitControleComanda, UnitPagamento, UnitRelatorioComandaData,
   UnitRelatorioMovimentacaoFinanceira, UnitRelatorioDetalhesPagamento,
   UnitRelatorioItens, UnitRelatorioVendasGarcom, UnitRelatorioMultiselecao,
-  UnitLogin;
+  UnitLogin, UnitRelatorioItensComanda;
 
 procedure TFormPrincipal.Comanda1Click(Sender: TObject);
 var
@@ -173,6 +176,15 @@ var
   form: TFormRelatorioItens;
 begin
   form := TFormRelatorioItens.Create(Self);
+  form.ShowModal;
+  form.Free;
+end;
+
+procedure TFormPrincipal.ItensComanda1Click(Sender: TObject);
+var
+  form: TFormRelatorioItensComanda;
+begin
+  form := TFormRelatorioItensComanda.Create(Self);
   form.ShowModal;
   form.Free;
 end;

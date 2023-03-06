@@ -1,7 +1,5 @@
 inherited FormCadastroComanda: TFormCadastroComanda
   Caption = 'Cadastro Comanda'
-  ExplicitWidth = 730
-  ExplicitHeight = 518
   PixelsPerInch = 96
   TextHeight = 13
   inherited PageControl: TPageControl
@@ -239,5 +237,277 @@ inherited FormCadastroComanda: TFormCadastroComanda
   inherited DataSource: TDataSource
     Left = 432
     Top = 312
+  end
+  inherited ppDBPipeline1: TppDBPipeline
+    object ppDBPipeline1ppField1: TppField
+      FieldAlias = 'idcomanda'
+      FieldName = 'idcomanda'
+      FieldLength = 0
+      DataType = dtLargeInt
+      DisplayWidth = 15
+      Position = 0
+    end
+    object ppDBPipeline1ppField2: TppField
+      FieldAlias = 'idgarcom'
+      FieldName = 'idgarcom'
+      FieldLength = 0
+      DataType = dtLargeInt
+      DisplayWidth = 15
+      Position = 1
+    end
+    object ppDBPipeline1ppField3: TppField
+      FieldAlias = 'dtcomanda'
+      FieldName = 'dtcomanda'
+      FieldLength = 0
+      DataType = dtDate
+      DisplayWidth = 10
+      Position = 2
+    end
+    object ppDBPipeline1ppField4: TppField
+      Alignment = taRightJustify
+      FieldAlias = 'idstatuscomanda'
+      FieldName = 'idstatuscomanda'
+      FieldLength = 0
+      DataType = dtInteger
+      DisplayWidth = 10
+      Position = 3
+    end
+    object ppDBPipeline1ppField5: TppField
+      Alignment = taRightJustify
+      FieldAlias = 'vldesconto'
+      FieldName = 'vldesconto'
+      FieldLength = 2
+      DataType = dtDouble
+      DisplayWidth = 11
+      Position = 4
+    end
+    object ppDBPipeline1ppField6: TppField
+      FieldAlias = 'idgarcom_1'
+      FieldName = 'idgarcom_1'
+      FieldLength = 0
+      DataType = dtLargeInt
+      DisplayWidth = 15
+      Position = 5
+    end
+    object ppDBPipeline1ppField7: TppField
+      FieldAlias = 'nmgarcom'
+      FieldName = 'nmgarcom'
+      FieldLength = 50
+      DisplayWidth = 50
+      Position = 6
+    end
+    object ppDBPipeline1ppField8: TppField
+      FieldAlias = 'idstatusgarcom'
+      FieldName = 'idstatusgarcom'
+      FieldLength = 0
+      DataType = dtLargeInt
+      DisplayWidth = 15
+      Position = 7
+    end
+    object ppDBPipeline1ppField9: TppField
+      FieldAlias = 'idstatuscomanda_1'
+      FieldName = 'idstatuscomanda_1'
+      FieldLength = 0
+      DataType = dtLargeInt
+      DisplayWidth = 15
+      Position = 8
+    end
+    object ppDBPipeline1ppField10: TppField
+      FieldAlias = 'nmcomanda'
+      FieldName = 'nmcomanda'
+      FieldLength = 7
+      DisplayWidth = 7
+      Position = 9
+    end
+  end
+  inherited ppReport1: TppReport
+    DataPipelineName = 'ppDBPipeline1'
+    inherited ppHeaderBand1: TppHeaderBand
+      inherited ppLabel1: TppLabel
+        SaveOrder = -1
+        Caption = 'Comanda'
+        mmLeft = 85461
+        mmWidth = 25400
+        LayerName = Foreground
+      end
+      inherited ppLine1: TppLine
+        LayerName = Foreground
+      end
+      inherited ppLine2: TppLine
+        LayerName = Foreground
+      end
+      object ppLabel5: TppLabel
+        UserName = 'Label2'
+        AutoSize = False
+        Caption = 'Comanda'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4763
+        mmLeft = 1322
+        mmTop = 12436
+        mmWidth = 21696
+        BandType = 0
+        LayerName = Foreground
+      end
+      object ppLabel6: TppLabel
+        UserName = 'Label3'
+        AutoSize = False
+        Caption = 'Data'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4763
+        mmLeft = 24340
+        mmTop = 12435
+        mmWidth = 32808
+        BandType = 0
+        LayerName = Foreground
+      end
+      object ppLabel7: TppLabel
+        UserName = 'Label4'
+        AutoSize = False
+        Caption = 'Gar'#231'om'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4763
+        mmLeft = 58208
+        mmTop = 12435
+        mmWidth = 40000
+        BandType = 0
+        LayerName = Foreground
+      end
+      object ppLabel8: TppLabel
+        UserName = 'Label5'
+        AutoSize = False
+        Caption = 'Status Comanda'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4763
+        mmLeft = 99745
+        mmTop = 12434
+        mmWidth = 32000
+        BandType = 0
+        LayerName = Foreground
+      end
+    end
+    inherited ppDetailBand1: TppDetailBand
+      object ppDBText1: TppDBText
+        UserName = 'DBText1'
+        DataField = 'idcomanda'
+        DataPipeline = ppDBPipeline1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        DataPipelineName = 'ppDBPipeline1'
+        mmHeight = 4763
+        mmLeft = 1323
+        mmTop = 794
+        mmWidth = 21696
+        BandType = 4
+        LayerName = Foreground
+      end
+      object ppDBText2: TppDBText
+        UserName = 'DBText2'
+        DataField = 'dtcomanda'
+        DataPipeline = ppDBPipeline1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'ppDBPipeline1'
+        mmHeight = 4763
+        mmLeft = 24342
+        mmTop = 794
+        mmWidth = 32808
+        BandType = 4
+        LayerName = Foreground
+      end
+      object ppDBText3: TppDBText
+        UserName = 'DBText3'
+        DataField = 'nmgarcom'
+        DataPipeline = ppDBPipeline1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'ppDBPipeline1'
+        mmHeight = 4763
+        mmLeft = 58208
+        mmTop = 795
+        mmWidth = 40000
+        BandType = 4
+        LayerName = Foreground
+      end
+      object ppDBText4: TppDBText
+        UserName = 'DBText4'
+        DataField = 'nmcomanda'
+        DataPipeline = ppDBPipeline1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'ppDBPipeline1'
+        mmHeight = 4763
+        mmLeft = 99747
+        mmTop = 794
+        mmWidth = 32000
+        BandType = 4
+        LayerName = Foreground
+      end
+    end
+    inherited ppFooterBand1: TppFooterBand
+      inherited ppSystemVariable1: TppSystemVariable
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppLabel2: TppLabel
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppSystemVariable2: TppSystemVariable
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppLabel3: TppLabel
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppLabel4: TppLabel
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppSystemVariable3: TppSystemVariable
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppLine3: TppLine
+        LayerName = Foreground
+      end
+    end
   end
 end

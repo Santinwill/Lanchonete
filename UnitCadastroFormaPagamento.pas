@@ -11,7 +11,8 @@ uses
   Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ComCtrls, cxGraphics,
   cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit,
   dxSkinsCore, dxSkinsDefaultPainters, cxDBEdit, cxTextEdit, cxMaskEdit,
-  cxSpinEdit;
+  cxSpinEdit, ppCtrls, ppDB, ppParameter, ppDesignLayer, ppVar, ppBands,
+  ppPrnabl, ppClass, ppCache, ppProd, ppReport, ppComm, ppRelatv, ppDBPipe;
 
 type
   TFormCadastroFormaPagamento = class(TFormCadastroBase)
@@ -27,6 +28,12 @@ type
     Label5: TLabel;
     cxDBTextEdit2: TcxDBTextEdit;
     ButtonAlterarSituacaoFormpgmt: TButton;
+    ppLabel5: TppLabel;
+    ppDBText1: TppDBText;
+    ppLabel6: TppLabel;
+    ppDBText2: TppDBText;
+    ppLabel7: TppLabel;
+    ppDBText3: TppDBText;
     procedure FormCreate(Sender: TObject);
     procedure ButtonInserirClick(Sender: TObject);
     procedure ButtonAlterarClick(Sender: TObject);

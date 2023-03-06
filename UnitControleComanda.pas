@@ -11,7 +11,9 @@ uses
   Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ComCtrls, cxGraphics,
   cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit,
   dxSkinsCore, dxSkinsDefaultPainters, cxDBEdit, cxDropDownEdit, cxCalendar,
-  cxTextEdit, cxMaskEdit, cxSpinEdit;
+  cxTextEdit, cxMaskEdit, cxSpinEdit, ppDesignLayer, ppParameter, ppProd,
+  ppClass, ppReport, ppComm, ppRelatv, ppDB, ppDBPipe, ppVar, ppBands, ppCtrls,
+  ppPrnabl, ppCache;
 
 type
   TFormControleComanda = class(TFormCadastroBase)
@@ -141,6 +143,7 @@ begin
   form := TFormCadastroCardapio.Create(Self);
   form.Base_FiltrosExtras := ' PRODUTO.FLSITUACAO = 1 ';
   form.ButtonSelecionar.Visible := True;
+  form.ButtonImprimir.Enabled := False;
   form.ShowModal;
   if form.ModalResult = mrOk then
   begin
@@ -166,6 +169,7 @@ begin
   form := TFormCadastroComanda.Create(Self);
   form.Base_FiltrosExtras := ' COMANDA.IDSTATUSCOMANDA = 1 ';
   form.ButtonSelecionar.Visible := True;
+  form.ButtonImprimir.Enabled := False;
   form.ShowModal;
   if form.ModalResult = mrOk then
   begin

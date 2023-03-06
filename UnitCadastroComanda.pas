@@ -11,7 +11,9 @@ uses
   Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ComCtrls, cxGraphics,
   cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit,
   dxSkinsCore, dxSkinsDefaultPainters, cxDBEdit, cxDropDownEdit, cxCalendar,
-  cxTextEdit, cxMaskEdit, cxSpinEdit;
+  cxTextEdit, cxMaskEdit, cxSpinEdit, ppCtrls, ppDB, ppParameter, ppDesignLayer,
+  ppVar, ppBands, ppPrnabl, ppClass, ppCache, ppProd, ppReport, ppComm,
+  ppRelatv, ppDBPipe;
 
 type
   TFormCadastroComanda = class(TFormCadastroBase)
@@ -34,6 +36,14 @@ type
     Label10: TLabel;
     cxDBTextEdit2: TcxDBTextEdit;
     ButtonSelecionarGarcom: TButton;
+    ppLabel5: TppLabel;
+    ppDBText1: TppDBText;
+    ppLabel6: TppLabel;
+    ppDBText2: TppDBText;
+    ppLabel7: TppLabel;
+    ppDBText3: TppDBText;
+    ppLabel8: TppLabel;
+    ppDBText4: TppDBText;
     procedure ButtonInserirClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure ButtonSelecionarGarcomClick(Sender: TObject);
@@ -99,6 +109,7 @@ begin
   form := TFormCadastroGarcom.Create(Self);
   form.Base_FiltrosExtras := ' GARCOM.IDSTATUSGARCOM = 1 ';
   form.ButtonSelecionar.Visible := True;
+  form.ButtonImprimir.Enabled := False;
   form.ShowModal;
   if form.ModalResult = mrOk then
   begin

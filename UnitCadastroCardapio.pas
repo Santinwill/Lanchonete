@@ -11,7 +11,9 @@ uses
   Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ComCtrls, cxGraphics,
   cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit,
   dxSkinsCore, dxSkinsDefaultPainters, cxMemo, cxDBEdit, cxCurrencyEdit,
-  cxTextEdit, cxMaskEdit, cxSpinEdit;
+  cxTextEdit, cxMaskEdit, cxSpinEdit, ppBands, ppCache, ppClass, ppDesignLayer,
+  ppParameter, ppProd, ppReport, ppComm, ppRelatv, ppDB, ppDBPipe, ppVar,
+  ppCtrls, ppPrnabl;
 
 type
   TFormCadastroCardapio = class(TFormCadastroBase)
@@ -40,6 +42,16 @@ type
     ButtonBuscarCategoria: TButton;
     ButtonAlterarSituacaoCardapio: TButton;
     Label5: TLabel;
+    ppLabel5: TppLabel;
+    ppDBText1: TppDBText;
+    ppLabel6: TppLabel;
+    ppDBText2: TppDBText;
+    ppLabel7: TppLabel;
+    ppDBText3: TppDBText;
+    ppLabel8: TppLabel;
+    ppDBText4: TppDBText;
+    ppLabel9: TppLabel;
+    ppDBText5: TppDBText;
     procedure ButtonBuscarCategoriaClick(Sender: TObject);
     procedure ButtonInserirClick(Sender: TObject);
     procedure ButtonAlterarClick(Sender: TObject);
@@ -91,6 +103,7 @@ begin
   form := TFormCadastroCategoriaProduto.Create(Self);
   form.Base_FiltrosExtras := ' TIPO.FLSITUACAO = 1';
   form.ButtonSelecionar.Visible := True;
+  form.ButtonImprimir.Enabled := False;
   form.ShowModal;
   if form.ModalResult = mrOk then
   begin

@@ -100,6 +100,13 @@ object FormPrincipal: TFormPrincipal
         Caption = 'Vendas Gar'#231'om'
         OnClick = VendasGarom1Click
       end
+      object N4: TMenuItem
+        Caption = '-'
+      end
+      object ItensComanda1: TMenuItem
+        Caption = 'Itens Comanda'
+        OnClick = ItensComanda1Click
+      end
       object N3: TMenuItem
         Caption = '-'
       end

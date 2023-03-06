@@ -25,6 +25,9 @@ inherited FormControleComanda: TFormControleComanda
         end
       end
       inherited Panel2: TPanel
+        inherited ButtonImprimir: TButton
+          Visible = False
+        end
         inherited ButtonSelecionar: TButton
           Left = 539
           Visible = False
@@ -359,5 +362,175 @@ inherited FormControleComanda: TFormControleComanda
   end
   inherited DataSource: TDataSource
     Left = 592
+  end
+  inherited ppDBPipeline1: TppDBPipeline
+    object ppDBPipeline1ppField1: TppField
+      FieldAlias = 'iditencomanda'
+      FieldName = 'iditencomanda'
+      FieldLength = 0
+      DataType = dtLargeInt
+      DisplayWidth = 15
+      Position = 0
+    end
+    object ppDBPipeline1ppField2: TppField
+      FieldAlias = 'idcomanda'
+      FieldName = 'idcomanda'
+      FieldLength = 0
+      DataType = dtLargeInt
+      DisplayWidth = 15
+      Position = 1
+    end
+    object ppDBPipeline1ppField3: TppField
+      FieldAlias = 'idproduto'
+      FieldName = 'idproduto'
+      FieldLength = 0
+      DataType = dtLargeInt
+      DisplayWidth = 15
+      Position = 2
+    end
+    object ppDBPipeline1ppField4: TppField
+      FieldAlias = 'dtaddcomanda'
+      FieldName = 'dtaddcomanda'
+      FieldLength = 0
+      DataType = dtDate
+      DisplayWidth = 10
+      Position = 3
+    end
+    object ppDBPipeline1ppField5: TppField
+      Alignment = taRightJustify
+      FieldAlias = 'vlvenda'
+      FieldName = 'vlvenda'
+      FieldLength = 2
+      DataType = dtDouble
+      DisplayWidth = 11
+      Position = 4
+    end
+    object ppDBPipeline1ppField6: TppField
+      FieldAlias = 'idsituacaoprodutocomanda'
+      FieldName = 'idsituacaoprodutocomanda'
+      FieldLength = 0
+      DataType = dtLargeInt
+      DisplayWidth = 15
+      Position = 5
+    end
+    object ppDBPipeline1ppField7: TppField
+      FieldAlias = 'idcomanda_1'
+      FieldName = 'idcomanda_1'
+      FieldLength = 0
+      DataType = dtLargeInt
+      DisplayWidth = 15
+      Position = 6
+    end
+    object ppDBPipeline1ppField8: TppField
+      FieldAlias = 'idgarcom'
+      FieldName = 'idgarcom'
+      FieldLength = 0
+      DataType = dtLargeInt
+      DisplayWidth = 15
+      Position = 7
+    end
+    object ppDBPipeline1ppField9: TppField
+      FieldAlias = 'dtcomanda'
+      FieldName = 'dtcomanda'
+      FieldLength = 0
+      DataType = dtDate
+      DisplayWidth = 10
+      Position = 8
+    end
+    object ppDBPipeline1ppField10: TppField
+      Alignment = taRightJustify
+      FieldAlias = 'idstatuscomanda'
+      FieldName = 'idstatuscomanda'
+      FieldLength = 0
+      DataType = dtInteger
+      DisplayWidth = 10
+      Position = 9
+    end
+    object ppDBPipeline1ppField11: TppField
+      Alignment = taRightJustify
+      FieldAlias = 'vldesconto'
+      FieldName = 'vldesconto'
+      FieldLength = 2
+      DataType = dtDouble
+      DisplayWidth = 11
+      Position = 10
+    end
+    object ppDBPipeline1ppField12: TppField
+      FieldAlias = 'idgarcom_1'
+      FieldName = 'idgarcom_1'
+      FieldLength = 0
+      DataType = dtLargeInt
+      DisplayWidth = 15
+      Position = 11
+    end
+    object ppDBPipeline1ppField13: TppField
+      FieldAlias = 'nmgarcom'
+      FieldName = 'nmgarcom'
+      FieldLength = 50
+      DisplayWidth = 50
+      Position = 12
+    end
+    object ppDBPipeline1ppField14: TppField
+      FieldAlias = 'nmproduto'
+      FieldName = 'nmproduto'
+      FieldLength = 50
+      DisplayWidth = 50
+      Position = 13
+    end
+    object ppDBPipeline1ppField15: TppField
+      FieldAlias = 'nmstatusprodutocomanda'
+      FieldName = 'nmstatusprodutocomanda'
+      FieldLength = 50
+      DisplayWidth = 50
+      Position = 14
+    end
+  end
+  inherited ppReport1: TppReport
+    PrinterSetup.Orientation = poLandscape
+    PrinterSetup.mmPaperHeight = 210000
+    PrinterSetup.mmPaperWidth = 297000
+    DataPipelineName = 'ppDBPipeline1'
+    inherited ppHeaderBand1: TppHeaderBand
+      inherited ppLabel1: TppLabel
+        SaveOrder = -1
+        mmWidth = 102346
+        LayerName = Foreground1
+      end
+      inherited ppLine1: TppLine
+        LayerName = Foreground1
+      end
+      inherited ppLine2: TppLine
+        LayerName = Foreground1
+      end
+    end
+    inherited ppFooterBand1: TppFooterBand
+      inherited ppSystemVariable1: TppSystemVariable
+        SaveOrder = -1
+        LayerName = Foreground1
+      end
+      inherited ppLabel2: TppLabel
+        SaveOrder = -1
+        LayerName = Foreground1
+      end
+      inherited ppSystemVariable2: TppSystemVariable
+        SaveOrder = -1
+        LayerName = Foreground1
+      end
+      inherited ppLabel3: TppLabel
+        SaveOrder = -1
+        LayerName = Foreground1
+      end
+      inherited ppLabel4: TppLabel
+        SaveOrder = -1
+        LayerName = Foreground1
+      end
+      inherited ppSystemVariable3: TppSystemVariable
+        SaveOrder = -1
+        LayerName = Foreground1
+      end
+      inherited ppLine3: TppLine
+        LayerName = Foreground1
+      end
+    end
   end
 end

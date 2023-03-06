@@ -8,7 +8,9 @@ uses
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   Vcl.StdCtrls, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids,
-  Vcl.DBGrids, Vcl.ExtCtrls, Vcl.ComCtrls;
+  Vcl.DBGrids, Vcl.ExtCtrls, Vcl.ComCtrls, ppProd, ppClass, ppReport, ppComm,
+  ppRelatv, ppDB, ppDBPipe, ppDesignLayer, ppParameter, ppVar, ppBands, ppCtrls,
+  ppPrnabl, ppCache;
 
 type
   TFormCadastroBase = class(TForm)
@@ -32,6 +34,24 @@ type
     ButtonCancelar: TButton;
     LabelBuscar: TLabel;
     LabelAtivoInativo: TLabel;
+    ppDBPipeline1: TppDBPipeline;
+    ppReport1: TppReport;
+    ppHeaderBand1: TppHeaderBand;
+    ppLabel1: TppLabel;
+    ppLine1: TppLine;
+    ppLine2: TppLine;
+    ppDetailBand1: TppDetailBand;
+    ppFooterBand1: TppFooterBand;
+    ppSystemVariable1: TppSystemVariable;
+    ppLabel2: TppLabel;
+    ppSystemVariable2: TppSystemVariable;
+    ppLabel3: TppLabel;
+    ppLabel4: TppLabel;
+    ppSystemVariable3: TppSystemVariable;
+    ppLine3: TppLine;
+    ppDesignLayers1: TppDesignLayers;
+    ppDesignLayer1: TppDesignLayer;
+    ppParameterList1: TppParameterList;
     procedure FormCreate(Sender: TObject);
     procedure ButtonInserirClick(Sender: TObject);
     procedure ButtonAlterarClick(Sender: TObject);
@@ -42,6 +62,7 @@ type
     procedure ButtonSelecionarClick(Sender: TObject);
     procedure ButtonAlternarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure ButtonImprimirClick(Sender: TObject);
   private
     { Private declarations }
     procedure ExibirConsultaCadastro(n: Integer);
@@ -122,6 +143,11 @@ end;
 procedure TFormCadastroBase.ButtonFecharClick(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TFormCadastroBase.ButtonImprimirClick(Sender: TObject);
+begin
+  ppReport1.PrintReport;
 end;
 
 procedure TFormCadastroBase.ButtonInserirClick(Sender: TObject);
