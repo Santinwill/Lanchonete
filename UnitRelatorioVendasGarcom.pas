@@ -10,7 +10,7 @@ uses
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
   Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ComCtrls, ppCtrls,
   ppDB, ppDBPipe, ppParameter, ppDesignLayer, ppVar, ppBands, ppPrnabl, ppClass,
-  ppCache, ppComm, ppRelatv, ppProd, ppReport;
+  ppCache, ppComm, ppRelatv, ppProd, ppReport, ppStrtch, ppMemo;
 
 type
   TFormRelatorioVendasGarcom = class(TFormRelatorioBase)
@@ -34,6 +34,7 @@ type
     procedure ButtonGarcomClick(Sender: TObject);
     procedure ButtonBuscarClick(Sender: TObject);
     procedure ButtonCancelarClick(Sender: TObject);
+    procedure ButtonImprimirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -78,6 +79,19 @@ begin
     EditGarcom.Text := form.FDQuery.FieldByName('NMGARCOM').AsString;
   end;
   form.Free;
+end;
+
+procedure TFormRelatorioVendasGarcom.ButtonImprimirClick(Sender: TObject);
+var
+  contador: integer;
+begin
+  contador := DBGridRelatorio.DataSource.DataSet.RecordCount;
+  ppLabeltotalregistro.Caption := 'Total de ' + IntToStr(contador) + ' registros.';
+  ppMemofiltro.Lines.Add('Garçom ' + EditGarcom.Text);
+  ppMemofiltro.Lines.Add('Data inicial ' + DateToStr(DateTimePickerInicial.Date) +
+                         ' data final ' + DateToStr(DateTimePickerFinal.Date));
+  inherited;
+  ppMemofiltro.Lines.Clear;
 end;
 
 end.

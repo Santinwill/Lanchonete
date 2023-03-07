@@ -1,9 +1,10 @@
 inherited FormCadastroComanda: TFormCadastroComanda
   Caption = 'Cadastro Comanda'
+  ExplicitWidth = 730
+  ExplicitHeight = 518
   PixelsPerInch = 96
   TextHeight = 13
   inherited PageControl: TPageControl
-    ActivePage = TabSheetCadastro
     inherited TabSheetConsulta: TTabSheet
       inherited Panel1: TPanel
         inherited EditBuscar: TEdit
@@ -337,7 +338,7 @@ inherited FormCadastroComanda: TFormCadastroComanda
         LayerName = Foreground
       end
       object ppLabel5: TppLabel
-        UserName = 'Label2'
+        UserName = 'Label6'
         AutoSize = False
         Caption = 'Comanda'
         Font.Charset = DEFAULT_CHARSET
@@ -506,6 +507,12 @@ inherited FormCadastroComanda: TFormCadastroComanda
         LayerName = Foreground
       end
       inherited ppLine3: TppLine
+        LayerName = Foreground
+      end
+    end
+    inherited ppSummaryBand1: TppSummaryBand
+      inherited ppLabeltotalregistro: TppLabel
+        SaveOrder = -1
         LayerName = Foreground
       end
     end

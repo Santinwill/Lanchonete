@@ -71,7 +71,7 @@ inherited FormRelatorioDetalhesPagamento: TFormRelatorioDetalhesPagamento
         LayerName = Foreground
       end
       object ppLabel5: TppLabel
-        UserName = 'Label2'
+        UserName = 'Label5'
         AutoSize = False
         Caption = 'Forma Pagamento'
         Font.Charset = DEFAULT_CHARSET
@@ -88,7 +88,7 @@ inherited FormRelatorioDetalhesPagamento: TFormRelatorioDetalhesPagamento
         LayerName = Foreground
       end
       object ppLabel6: TppLabel
-        UserName = 'Label3'
+        UserName = 'Label6'
         AutoSize = False
         Caption = 'Valor'
         Font.Charset = DEFAULT_CHARSET
@@ -145,7 +145,7 @@ inherited FormRelatorioDetalhesPagamento: TFormRelatorioDetalhesPagamento
       end
     end
     inherited ppFooterBand1: TppFooterBand
-      inherited ppLine3: TppLine [0]
+      inherited ppLine3: TppLine
         LayerName = Foreground
       end
       inherited ppSystemVariable1: TppSystemVariable [1]
@@ -169,6 +169,23 @@ inherited FormRelatorioDetalhesPagamento: TFormRelatorioDetalhesPagamento
         LayerName = Foreground
       end
       inherited ppSystemVariable3: TppSystemVariable [6]
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+    end
+    inherited ppSummaryBand1: TppSummaryBand
+      inherited ppLabeltexte: TppLabel
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppMemofiltro: TppMemo
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppLine4: TppLine
+        LayerName = Foreground
+      end
+      inherited ppLabeltotalregistro: TppLabel
         SaveOrder = -1
         LayerName = Foreground
       end

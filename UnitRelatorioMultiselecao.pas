@@ -10,7 +10,7 @@ uses
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
   Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, ppDB, ppDBPipe,
   ppParameter, ppDesignLayer, ppVar, ppBands, ppCtrls, ppPrnabl, ppClass,
-  ppCache, ppComm, ppRelatv, ppProd, ppReport;
+  ppCache, ppComm, ppRelatv, ppProd, ppReport, ppStrtch, ppMemo;
 
 type
   TFormRelatorioMultiselecao = class(TFormRelatorioBase)
@@ -47,6 +47,7 @@ type
     procedure ButtonBuscarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure ButtonLimparCamposClick(Sender: TObject);
+    procedure ButtonImprimirClick(Sender: TObject);
   private
     { Private declarations }
     procedure garcom;
@@ -71,22 +72,29 @@ procedure TFormRelatorioMultiselecao.Buscar;
 var
   sql: String;
 begin
+  ppMemofiltro.Lines.Clear;
   sql := base_sql;
     if EditComanda.Text <> '' then
     begin
       sql := sql + ' and COMANDA.IDCOMANDA = ' + EditComanda.Text;
+      ppMemofiltro.Lines.Add('Código da comanda: ' + EditComanda.Text);
     end;
     if EditItem.Text <> '' then
     begin
       sql := sql + ' and PRODUTO.IDPRODUTO = ' + EditItem.Text;
+      ppMemofiltro.Lines.Add('Código do produto: ' + EditItem.Text);
     end;
     if ComboBoxGarcom.Text <> '' then
     begin
-      sql := sql + ' and GARCOM.NMGARCOM LIKE (' + QuotedStr('%' + ComboBoxGarcom.Text + '%') + ')';
+      sql := sql + ' and GARCOM.NMGARCOM LIKE (' +
+                     QuotedStr('%' + ComboBoxGarcom.Text + '%') + ')';
+      ppMemofiltro.Lines.Add('Nome do garçom: ' + ComboBoxGarcom.Text);
     end;
     if ComboBoxCategoria.Text <> '' then
     begin
-      sql := sql + ' and TIPO.NMCATEGORIA LIKE (' + QuotedStr('%' + ComboBoxCategoria.Text + '%') + ')';
+      sql := sql + ' and TIPO.NMCATEGORIA LIKE (' +
+                     QuotedStr('%' + ComboBoxCategoria.Text + '%') + ')';
+      ppMemofiltro.Lines.Add('Categoria: ' + ComboBoxCategoria.Text);
     end;
   FDQueryRelatorio.Close;
   FDQueryRelatorio.SQL.Text := sql;
@@ -96,6 +104,16 @@ end;
 procedure TFormRelatorioMultiselecao.ButtonBuscarClick(Sender: TObject);
 begin
    Buscar;
+end;
+
+procedure TFormRelatorioMultiselecao.ButtonImprimirClick(Sender: TObject);
+var
+  contador: integer;
+begin
+  contador := DBGridRelatorio.DataSource.DataSet.RecordCount;
+  ppLabeltotalregistro.Caption := 'Total de ' + IntToStr(contador) + ' registros.';
+  inherited;
+  ppMemofiltro.Lines.Clear;
 end;
 
 procedure TFormRelatorioMultiselecao.ButtonLimparCamposClick(Sender: TObject);

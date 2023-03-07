@@ -3,7 +3,6 @@ inherited FormCadastroCardapio: TFormCadastroCardapio
   PixelsPerInch = 96
   TextHeight = 13
   inherited PageControl: TPageControl
-    ActivePage = TabSheetCadastro
     inherited TabSheetConsulta: TTabSheet
       inherited Panel1: TPanel
         inherited LabelBuscar: TLabel
@@ -400,26 +399,8 @@ inherited FormCadastroCardapio: TFormCadastroCardapio
       inherited ppLine2: TppLine
         LayerName = Foreground
       end
-      object ppLabel5: TppLabel
-        UserName = 'Label2'
-        AutoSize = False
-        Caption = 'C'#243'd.'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 12
-        Font.Style = []
-        TextAlignment = taCentered
-        Transparent = True
-        mmHeight = 4763
-        mmLeft = 1323
-        mmTop = 12699
-        mmWidth = 10000
-        BandType = 0
-        LayerName = Foreground
-      end
       object ppLabel6: TppLabel
-        UserName = 'Label3'
+        UserName = 'Label7'
         AutoSize = False
         Caption = 'Produto'
         Font.Charset = DEFAULT_CHARSET
@@ -607,6 +588,12 @@ inherited FormCadastroCardapio: TFormCadastroCardapio
         LayerName = Foreground
       end
       inherited ppLine3: TppLine
+        LayerName = Foreground
+      end
+    end
+    inherited ppSummaryBand1: TppSummaryBand
+      inherited ppLabeltotalregistro: TppLabel
+        SaveOrder = -1
         LayerName = Foreground
       end
     end

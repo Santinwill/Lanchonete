@@ -10,7 +10,7 @@ uses
   Vcl.StdCtrls, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids,
   Vcl.DBGrids, Vcl.ExtCtrls, Vcl.ComCtrls, ppProd, ppClass, ppReport, ppComm,
   ppRelatv, ppDB, ppDBPipe, ppDesignLayer, ppParameter, ppVar, ppBands, ppCtrls,
-  ppPrnabl, ppCache;
+  ppPrnabl, ppCache, ppStrtch, ppMemo;
 
 type
   TFormCadastroBase = class(TForm)
@@ -52,6 +52,8 @@ type
     ppDesignLayers1: TppDesignLayers;
     ppDesignLayer1: TppDesignLayer;
     ppParameterList1: TppParameterList;
+    ppSummaryBand1: TppSummaryBand;
+    ppLabeltotalregistro: TppLabel;
     procedure FormCreate(Sender: TObject);
     procedure ButtonInserirClick(Sender: TObject);
     procedure ButtonAlterarClick(Sender: TObject);

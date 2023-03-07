@@ -203,19 +203,13 @@ object FormRelatorioBase: TFormRelatorioBase
       mmBottomOffset = 0
       mmHeight = 7144
       mmPrintPosition = 0
-      object ppSystemVariable1: TppSystemVariable
-        UserName = 'SystemVariable1'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Calibri'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        TextAlignment = taCentered
-        Transparent = True
-        mmHeight = 3969
-        mmLeft = 10319
-        mmTop = 1058
-        mmWidth = 17992
+      object ppLine3: TppLine
+        UserName = 'Line3'
+        Weight = 0.750000000000000000
+        mmHeight = 1058
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 197644
         BandType = 8
         LayerName = Foreground
       end
@@ -236,9 +230,8 @@ object FormRelatorioBase: TFormRelatorioBase
         BandType = 8
         LayerName = Foreground
       end
-      object ppSystemVariable2: TppSystemVariable
-        UserName = 'SystemVariable2'
-        VarType = vtPageCount
+      object ppSystemVariable1: TppSystemVariable
+        UserName = 'SystemVariable1'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Calibri'
@@ -247,26 +240,9 @@ object FormRelatorioBase: TFormRelatorioBase
         TextAlignment = taCentered
         Transparent = True
         mmHeight = 3969
-        mmLeft = 191030
+        mmLeft = 10319
         mmTop = 1058
-        mmWidth = 1852
-        BandType = 8
-        LayerName = Foreground
-      end
-      object ppLabel3: TppLabel
-        UserName = 'Label1'
-        Caption = '/'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Calibri'
-        Font.Size = 10
-        Font.Style = [fsBold]
-        TextAlignment = taCentered
-        Transparent = True
-        mmHeight = 3968
-        mmLeft = 187061
-        mmTop = 1060
-        mmWidth = 1587
+        mmWidth = 17992
         BandType = 8
         LayerName = Foreground
       end
@@ -304,14 +280,108 @@ object FormRelatorioBase: TFormRelatorioBase
         BandType = 8
         LayerName = Foreground
       end
-      object ppLine3: TppLine
-        UserName = 'Line3'
+      object ppLabel3: TppLabel
+        UserName = 'Label1'
+        Caption = '/'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Calibri'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3968
+        mmLeft = 187061
+        mmTop = 1060
+        mmWidth = 1587
+        BandType = 8
+        LayerName = Foreground
+      end
+      object ppSystemVariable2: TppSystemVariable
+        UserName = 'SystemVariable2'
+        VarType = vtPageCount
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Calibri'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 191030
+        mmTop = 1058
+        mmWidth = 1852
+        BandType = 8
+        LayerName = Foreground
+      end
+    end
+    object ppSummaryBand1: TppSummaryBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 27517
+      mmPrintPosition = 0
+      object ppLabeltexte: TppLabel
+        UserName = 'Label2'
+        Caption = 'Filtros utilizados:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Calibri'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 1323
+        mmTop = 11380
+        mmWidth = 25665
+        BandType = 7
+        LayerName = Foreground
+      end
+      object ppMemofiltro: TppMemo
+        UserName = 'Memofiltro'
+        CharWrap = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Calibri'
+        Font.Size = 10
+        Font.Style = []
+        RemoveEmptyLines = False
+        Transparent = True
+        mmHeight = 10848
+        mmLeft = 5821
+        mmTop = 15878
+        mmWidth = 187061
+        BandType = 7
+        LayerName = Foreground
+        mmBottomOffset = 0
+        mmOverFlowOffset = 0
+        mmStopPosition = 0
+        mmMinHeight = 0
+        mmLeading = 0
+      end
+      object ppLine4: TppLine
+        UserName = 'Line4'
         Weight = 0.750000000000000000
         mmHeight = 1058
         mmLeft = 0
-        mmTop = 0
+        mmTop = 9267
         mmWidth = 197644
-        BandType = 8
+        BandType = 7
+        LayerName = Foreground
+      end
+      object ppLabeltotalregistro: TppLabel
+        UserName = 'Label3'
+        Caption = 'Label3'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Calibri'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 1320
+        mmTop = 3705
+        mmWidth = 9525
+        BandType = 7
         LayerName = Foreground
       end
     end

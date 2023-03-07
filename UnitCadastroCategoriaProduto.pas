@@ -38,6 +38,7 @@ type
     procedure ButtonInserirClick(Sender: TObject);
     procedure ButtonAlterarClick(Sender: TObject);
     procedure ButtonAlterarSituacaoClick(Sender: TObject);
+    procedure ButtonImprimirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -72,6 +73,15 @@ begin
     ShowMessage('Alterado para Ativo.');
     cxDBTextEdit2.Text := 'Ativo';
   end;
+end;
+
+procedure TFormCadastroCategoriaProduto.ButtonImprimirClick(Sender: TObject);
+var
+  contador: integer;
+begin
+  contador := DBGrid1.DataSource.DataSet.RecordCount;
+  ppLabeltotalregistro.Caption := 'Total de ' + IntToStr(contador) + ' registros.';
+  inherited;
 end;
 
 procedure TFormCadastroCategoriaProduto.ButtonInserirClick(Sender: TObject);

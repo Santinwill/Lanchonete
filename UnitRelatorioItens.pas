@@ -10,7 +10,8 @@ uses
   FireDAC.Stan.Async, FireDAC.DApt, Vcl.StdCtrls, Vcl.Menus,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids,
   Vcl.ExtCtrls, ppCtrls, ppDB, ppDBPipe, ppParameter, ppDesignLayer, ppVar,
-  ppBands, ppPrnabl, ppClass, ppCache, ppComm, ppRelatv, ppProd, ppReport;
+  ppBands, ppPrnabl, ppClass, ppCache, ppComm, ppRelatv, ppProd, ppReport,
+  ppStrtch, ppMemo;
 
 type
   TFormRelatorioItens = class(TFormRelatorioBase)
@@ -26,6 +27,7 @@ type
     procedure ButtonBuscarClick(Sender: TObject);
     procedure ButtonCancelarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure ButtonImprimirClick(Sender: TObject);
   private
     { Private declarations }
     procedure Buscar;
@@ -81,6 +83,17 @@ procedure TFormRelatorioItens.ButtonCancelarClick(Sender: TObject);
 begin
   inherited;
   FDQueryRelatorio.Free;
+end;
+
+procedure TFormRelatorioItens.ButtonImprimirClick(Sender: TObject);
+var
+  contador: integer;
+begin
+  contador := DBGridRelatorio.DataSource.DataSet.RecordCount;
+  ppLabeltotalregistro.Caption := 'Total de ' + IntToStr(contador) + ' registros.';
+  ppMemofiltro.Lines.Add(LabelIten.Caption);
+  inherited;
+  ppMemofiltro.Lines.Clear;
 end;
 
 procedure TFormRelatorioItens.FormCreate(Sender: TObject);

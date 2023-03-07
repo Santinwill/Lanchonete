@@ -13,7 +13,7 @@ uses
   dxSkinsCore, dxSkinsDefaultPainters, cxMemo, cxDBEdit, cxCurrencyEdit,
   cxTextEdit, cxMaskEdit, cxSpinEdit, ppBands, ppCache, ppClass, ppDesignLayer,
   ppParameter, ppProd, ppReport, ppComm, ppRelatv, ppDB, ppDBPipe, ppVar,
-  ppCtrls, ppPrnabl;
+  ppCtrls, ppPrnabl, ppStrtch, ppMemo;
 
 type
   TFormCadastroCardapio = class(TFormCadastroBase)
@@ -42,7 +42,6 @@ type
     ButtonBuscarCategoria: TButton;
     ButtonAlterarSituacaoCardapio: TButton;
     Label5: TLabel;
-    ppLabel5: TppLabel;
     ppDBText1: TppDBText;
     ppLabel6: TppLabel;
     ppDBText2: TppDBText;
@@ -57,6 +56,7 @@ type
     procedure ButtonAlterarClick(Sender: TObject);
     procedure ButtonAlterarSituacaoCardapioClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure ButtonImprimirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -95,7 +95,6 @@ begin
   end;
 end;
 
-
 procedure TFormCadastroCardapio.ButtonBuscarCategoriaClick(Sender: TObject);
 var
   form: TFormCadastroCategoriaProduto;
@@ -112,6 +111,15 @@ begin
     cxDBTextEdit2.Text := form.FDQuery.FieldByName('NMCATEGORIA').AsString;
   end;
   form.Free;
+end;
+
+procedure TFormCadastroCardapio.ButtonImprimirClick(Sender: TObject);
+var
+  contador: integer;
+begin
+  contador := DBGrid1.DataSource.DataSet.RecordCount;
+  ppLabeltotalregistro.Caption := 'Total de ' + IntToStr(contador) + ' registros.';
+  inherited;
 end;
 
 procedure TFormCadastroCardapio.ButtonInserirClick(Sender: TObject);

@@ -434,6 +434,28 @@ object FormCadastroBase: TFormCadastroBase
         LayerName = Foreground
       end
     end
+    object ppSummaryBand1: TppSummaryBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 9260
+      mmPrintPosition = 0
+      object ppLabeltotalregistro: TppLabel
+        UserName = 'Label2'
+        Caption = 'Label2'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Calibri'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 1322
+        mmTop = 2381
+        mmWidth = 9525
+        BandType = 7
+        LayerName = Foreground
+      end
+    end
     object ppDesignLayers1: TppDesignLayers
       object ppDesignLayer1: TppDesignLayer
         UserName = 'Foreground'

@@ -10,7 +10,7 @@ uses
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids,
   Vcl.ExtCtrls, Vcl.StdCtrls, ppBands, ppCache, ppClass, ppDesignLayer,
   ppParameter, ppComm, ppRelatv, ppProd, ppReport, ppDB, ppDBPipe, ppVar,
-  ppCtrls, ppPrnabl;
+  ppCtrls, ppPrnabl, ppStrtch, ppMemo;
 
 type
   TFormRelatorioBase = class(TForm)
@@ -40,6 +40,11 @@ type
     ppLabel4: TppLabel;
     ppSystemVariable3: TppSystemVariable;
     ppLine3: TppLine;
+    ppSummaryBand1: TppSummaryBand;
+    ppLabeltexte: TppLabel;
+    ppMemofiltro: TppMemo;
+    ppLine4: TppLine;
+    ppLabeltotalregistro: TppLabel;
     procedure ButtonCancelarClick(Sender: TObject);
     procedure ButtonImprimirClick(Sender: TObject);
   private

@@ -27,6 +27,7 @@ inherited FormRelatorioItensComanda: TFormRelatorioItensComanda
       item
         Expanded = False
         FieldName = 'nmproduto'
+        Width = 64
         Visible = True
       end
       item
@@ -114,7 +115,7 @@ inherited FormRelatorioItensComanda: TFormRelatorioItensComanda
         LayerName = Foreground
       end
       object ppLabel5: TppLabel
-        UserName = 'Label2'
+        UserName = 'Label6'
         AutoSize = False
         Caption = 'Produto'
         Font.Charset = DEFAULT_CHARSET
@@ -131,7 +132,7 @@ inherited FormRelatorioItensComanda: TFormRelatorioItensComanda
         LayerName = Foreground
       end
       object ppLabel6: TppLabel
-        UserName = 'Label3'
+        UserName = 'Label7'
         AutoSize = False
         Caption = 'Valor'
         Font.Charset = DEFAULT_CHARSET
@@ -258,7 +259,7 @@ inherited FormRelatorioItensComanda: TFormRelatorioItensComanda
       end
     end
     inherited ppFooterBand1: TppFooterBand
-      inherited ppSystemVariable1: TppSystemVariable
+      inherited ppSystemVariable1: TppSystemVariable [0]
         SaveOrder = -1
         LayerName = Foreground
       end
@@ -266,23 +267,40 @@ inherited FormRelatorioItensComanda: TFormRelatorioItensComanda
         SaveOrder = -1
         LayerName = Foreground
       end
-      inherited ppSystemVariable2: TppSystemVariable
+      inherited ppSystemVariable2: TppSystemVariable [2]
         SaveOrder = -1
         LayerName = Foreground
       end
-      inherited ppLabel3: TppLabel
+      inherited ppLabel3: TppLabel [3]
         SaveOrder = -1
         LayerName = Foreground
       end
-      inherited ppLabel4: TppLabel
+      inherited ppLabel4: TppLabel [4]
         SaveOrder = -1
         LayerName = Foreground
       end
-      inherited ppSystemVariable3: TppSystemVariable
+      inherited ppSystemVariable3: TppSystemVariable [5]
         SaveOrder = -1
         LayerName = Foreground
       end
-      inherited ppLine3: TppLine
+      inherited ppLine3: TppLine [6]
+        LayerName = Foreground
+      end
+    end
+    inherited ppSummaryBand1: TppSummaryBand
+      inherited ppLabeltexte: TppLabel
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppMemofiltro: TppMemo
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppLine4: TppLine
+        LayerName = Foreground
+      end
+      inherited ppLabeltotalregistro: TppLabel
+        SaveOrder = -1
         LayerName = Foreground
       end
     end

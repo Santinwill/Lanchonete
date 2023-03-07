@@ -38,6 +38,7 @@ type
     procedure ButtonInserirClick(Sender: TObject);
     procedure ButtonAlterarClick(Sender: TObject);
     procedure ButtonAlterarSituacaoGarcomClick(Sender: TObject);
+    procedure ButtonImprimirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -73,6 +74,15 @@ begin
   end;
 end;
 
+
+procedure TFormCadastroGarcom.ButtonImprimirClick(Sender: TObject);
+var
+  contador: integer;
+begin
+  contador := DBGrid1.DataSource.DataSet.RecordCount;
+  ppLabeltotalregistro.Caption := 'Total de ' + IntToStr(contador) + ' registros.';
+  inherited;
+end;
 
 procedure TFormCadastroGarcom.ButtonInserirClick(Sender: TObject);
 begin

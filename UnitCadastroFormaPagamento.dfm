@@ -1,9 +1,10 @@
 inherited FormCadastroFormaPagamento: TFormCadastroFormaPagamento
   Caption = 'Cadastro Forma de Pagamento'
+  ExplicitWidth = 730
+  ExplicitHeight = 518
   PixelsPerInch = 96
   TextHeight = 13
   inherited PageControl: TPageControl
-    ActivePage = TabSheetCadastro
     inherited TabSheetConsulta: TTabSheet
       inherited Panel2: TPanel
         inherited ButtonSelecionar: TButton
@@ -201,7 +202,7 @@ inherited FormCadastroFormaPagamento: TFormCadastroFormaPagamento
         LayerName = Foreground
       end
       object ppLabel5: TppLabel
-        UserName = 'Label2'
+        UserName = 'Label5'
         AutoSize = False
         Caption = 'C'#243'd.'
         Font.Charset = DEFAULT_CHARSET
@@ -335,6 +336,12 @@ inherited FormCadastroFormaPagamento: TFormCadastroFormaPagamento
         LayerName = Foreground
       end
       inherited ppLine3: TppLine
+        LayerName = Foreground
+      end
+    end
+    inherited ppSummaryBand1: TppSummaryBand
+      inherited ppLabeltotalregistro: TppLabel
+        SaveOrder = -1
         LayerName = Foreground
       end
     end

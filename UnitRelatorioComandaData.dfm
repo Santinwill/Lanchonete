@@ -209,27 +209,49 @@ inherited FormRelatorioComandaData: TFormRelatorioComandaData
       end
     end
     inherited ppFooterBand1: TppFooterBand
-      inherited ppSystemVariable1: TppSystemVariable
+      inherited ppLine3: TppLine
+        LayerName = Foreground
+      end
+      inherited ppSystemVariable1: TppSystemVariable [1]
         SaveOrder = -1
         LayerName = Foreground
       end
-      inherited ppLabel2: TppLabel
+      inherited ppLabel2: TppLabel [2]
         SaveOrder = -1
         LayerName = Foreground
       end
-      inherited ppSystemVariable2: TppSystemVariable
+      inherited ppSystemVariable2: TppSystemVariable [3]
         SaveOrder = -1
         LayerName = Foreground
       end
-      inherited ppLabel3: TppLabel
+      inherited ppLabel3: TppLabel [4]
         SaveOrder = -1
         LayerName = Foreground
       end
-      inherited ppLabel4: TppLabel
+      inherited ppLabel4: TppLabel [5]
         SaveOrder = -1
         LayerName = Foreground
       end
-      inherited ppSystemVariable3: TppSystemVariable
+      inherited ppSystemVariable3: TppSystemVariable [6]
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+    end
+    inherited ppSummaryBand1: TppSummaryBand
+      inherited ppLabeltexte: TppLabel
+        UserName = 'Label5'
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppMemofiltro: TppMemo
+        SaveOrder = -1
+        LayerName = Foreground
+      end
+      inherited ppLine4: TppLine
+        LayerName = Foreground
+      end
+      inherited ppLabeltotalregistro: TppLabel
+        UserName = 'Label6'
         SaveOrder = -1
         LayerName = Foreground
       end

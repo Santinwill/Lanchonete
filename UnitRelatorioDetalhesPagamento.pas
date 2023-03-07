@@ -10,7 +10,7 @@ uses
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
   Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, ppCtrls, ppDB, ppDBPipe,
   ppParameter, ppDesignLayer, ppVar, ppBands, ppPrnabl, ppClass, ppCache,
-  ppComm, ppRelatv, ppProd, ppReport;
+  ppComm, ppRelatv, ppProd, ppReport, ppStrtch, ppMemo;
 
 type
   TFormRelatorioDetalhesPagamento = class(TFormRelatorioBase)
@@ -24,6 +24,7 @@ type
     ppDBText2: TppDBText;
     procedure ButtonBuscarClick(Sender: TObject);
     procedure ButtonCancelarClick(Sender: TObject);
+    procedure ButtonImprimirClick(Sender: TObject);
   private
     { Private declarations }
     procedure Buscar;
@@ -59,6 +60,17 @@ procedure TFormRelatorioDetalhesPagamento.ButtonCancelarClick(Sender: TObject);
 begin
   inherited;
   FDQueryRelatorio.Close;
+end;
+
+procedure TFormRelatorioDetalhesPagamento.ButtonImprimirClick(Sender: TObject);
+var
+  contador: integer;
+begin
+  contador := DBGridRelatorio.DataSource.DataSet.RecordCount;
+  ppLabeltotalregistro.Caption := 'Total de ' + IntToStr(contador) + ' registros.';
+  ppMemofiltro.Lines.Add('Código da comanda ' + EditCodigoComanda.Text);
+  inherited;
+  ppMemofiltro.Lines.Clear;
 end;
 
 end.
