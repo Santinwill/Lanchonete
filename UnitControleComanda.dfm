@@ -1,5 +1,7 @@
 inherited FormControleComanda: TFormControleComanda
   Caption = 'Controle Comanda'
+  ExplicitWidth = 730
+  ExplicitHeight = 518
   PixelsPerInch = 96
   TextHeight = 13
   object Label2: TLabel [0]
@@ -10,7 +12,6 @@ inherited FormControleComanda: TFormControleComanda
     Caption = 'Label2'
   end
   inherited PageControl: TPageControl
-    ActivePage = TabSheetCadastro
     inherited TabSheetConsulta: TTabSheet
       inherited Panel1: TPanel
         inherited LabelBuscar: TLabel
@@ -25,9 +26,6 @@ inherited FormControleComanda: TFormControleComanda
         end
       end
       inherited Panel2: TPanel
-        inherited ButtonImprimir: TButton
-          Visible = False
-        end
         inherited ButtonSelecionar: TButton
           Left = 539
           Visible = False
@@ -120,6 +118,8 @@ inherited FormControleComanda: TFormControleComanda
       end
     end
     inherited TabSheetCadastro: TTabSheet
+      ExplicitLeft = 8
+      ExplicitTop = 28
       object Label1: TLabel [0]
         Left = 16
         Top = 16
@@ -493,43 +493,58 @@ inherited FormControleComanda: TFormControleComanda
     inherited ppHeaderBand1: TppHeaderBand
       inherited ppLabel1: TppLabel
         SaveOrder = -1
-        mmWidth = 102346
-        LayerName = Foreground1
+        Caption = 'Comanda'
+        mmLeft = 128852
+        mmWidth = 25400
+        LayerName = Foreground
       end
       inherited ppLine1: TppLine
-        LayerName = Foreground1
+        mmWidth = 284692
+        LayerName = Foreground
       end
       inherited ppLine2: TppLine
-        LayerName = Foreground1
+        mmWidth = 284692
+        LayerName = Foreground
       end
     end
     inherited ppFooterBand1: TppFooterBand
       inherited ppSystemVariable1: TppSystemVariable
         SaveOrder = -1
-        LayerName = Foreground1
+        LayerName = Foreground
       end
       inherited ppLabel2: TppLabel
         SaveOrder = -1
-        LayerName = Foreground1
+        LayerName = Foreground
       end
       inherited ppSystemVariable2: TppSystemVariable
         SaveOrder = -1
-        LayerName = Foreground1
+        mmLeft = 280994
+        LayerName = Foreground
       end
       inherited ppLabel3: TppLabel
         SaveOrder = -1
-        LayerName = Foreground1
+        mmLeft = 277025
+        LayerName = Foreground
       end
       inherited ppLabel4: TppLabel
         SaveOrder = -1
-        LayerName = Foreground1
+        mmLeft = 261944
+        LayerName = Foreground
       end
       inherited ppSystemVariable3: TppSystemVariable
         SaveOrder = -1
-        LayerName = Foreground1
+        mmLeft = 271734
+        LayerName = Foreground
       end
       inherited ppLine3: TppLine
-        LayerName = Foreground1
+        mmWidth = 284692
+        LayerName = Foreground
+      end
+    end
+    inherited ppSummaryBand1: TppSummaryBand
+      inherited ppLabeltotalregistro: TppLabel
+        SaveOrder = -1
+        LayerName = Foreground
       end
     end
   end

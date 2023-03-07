@@ -51,7 +51,7 @@ inherited FormRelatorioComandaData: TFormRelatorioComandaData
       '   WHERE COMANDA.DTCOMANDA'
       ' BETWEEN :DTINICIO'
       '     AND :DTFIM'
-      'ORDER BY COMANDA.IDCOMANDA')
+      'ORDER BY GARCOM.NMGARCOM')
     ParamData = <
       item
         Name = 'DTINICIO'
@@ -111,26 +111,9 @@ inherited FormRelatorioComandaData: TFormRelatorioComandaData
         Font.Style = []
         Transparent = True
         mmHeight = 4763
-        mmLeft = 1323
+        mmLeft = 21961
         mmTop = 12700
         mmWidth = 12000
-        BandType = 0
-        LayerName = Foreground
-      end
-      object ppLabel6: TppLabel
-        UserName = 'Label3'
-        AutoSize = False
-        Caption = 'Gar'#231'om'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 12
-        Font.Style = []
-        Transparent = True
-        mmHeight = 4763
-        mmLeft = 13491
-        mmTop = 12437
-        mmWidth = 60000
         BandType = 0
         LayerName = Foreground
       end
@@ -145,7 +128,7 @@ inherited FormRelatorioComandaData: TFormRelatorioComandaData
         Font.Style = []
         Transparent = True
         mmHeight = 4763
-        mmLeft = 74070
+        mmLeft = 34380
         mmTop = 12436
         mmWidth = 30000
         BandType = 0
@@ -165,27 +148,9 @@ inherited FormRelatorioComandaData: TFormRelatorioComandaData
         Transparent = True
         DataPipelineName = 'ppDBPipeline1'
         mmHeight = 4763
-        mmLeft = 1323
+        mmLeft = 21961
         mmTop = 265
         mmWidth = 12000
-        BandType = 4
-        LayerName = Foreground
-      end
-      object ppDBText2: TppDBText
-        UserName = 'DBText2'
-        DataField = 'nmgarcom'
-        DataPipeline = ppDBPipeline1
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 12
-        Font.Style = []
-        Transparent = True
-        DataPipelineName = 'ppDBPipeline1'
-        mmHeight = 4763
-        mmLeft = 13229
-        mmTop = 265
-        mmWidth = 60000
         BandType = 4
         LayerName = Foreground
       end
@@ -201,7 +166,7 @@ inherited FormRelatorioComandaData: TFormRelatorioComandaData
         Transparent = True
         DataPipelineName = 'ppDBPipeline1'
         mmHeight = 4763
-        mmLeft = 74083
+        mmLeft = 34393
         mmTop = 265
         mmWidth = 30000
         BandType = 4
@@ -254,6 +219,70 @@ inherited FormRelatorioComandaData: TFormRelatorioComandaData
         UserName = 'Label6'
         SaveOrder = -1
         LayerName = Foreground
+      end
+    end
+    object ppGroup1: TppGroup [4]
+      BreakName = 'nmgarcom'
+      DataPipeline = ppDBPipeline1
+      GroupFileSettings.NewFile = False
+      GroupFileSettings.EmailFile = False
+      KeepTogether = True
+      OutlineSettings.CreateNode = True
+      StartOnOddPage = False
+      UserName = 'Group1'
+      mmNewColumnThreshold = 0
+      mmNewPageThreshold = 0
+      DataPipelineName = 'ppDBPipeline1'
+      NewFile = False
+      object ppGroupHeaderBand1: TppGroupHeaderBand
+        Background.Brush.Style = bsClear
+        mmBottomOffset = 0
+        mmHeight = 8731
+        mmPrintPosition = 0
+        object ppDBText2: TppDBText
+          UserName = 'DBText2'
+          DataField = 'nmgarcom'
+          DataPipeline = ppDBPipeline1
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Name = 'Arial'
+          Font.Size = 12
+          Font.Style = []
+          Transparent = True
+          DataPipelineName = 'ppDBPipeline1'
+          mmHeight = 4763
+          mmLeft = 21432
+          mmTop = 1588
+          mmWidth = 60061
+          BandType = 3
+          GroupNo = 0
+          LayerName = Foreground
+        end
+        object ppLabel6: TppLabel
+          UserName = 'Label3'
+          AutoSize = False
+          Caption = 'Gar'#231'om'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Name = 'Arial'
+          Font.Size = 12
+          Font.Style = []
+          Transparent = True
+          mmHeight = 4763
+          mmLeft = 2910
+          mmTop = 1588
+          mmWidth = 17198
+          BandType = 3
+          GroupNo = 0
+          LayerName = Foreground
+        end
+      end
+      object ppGroupFooterBand1: TppGroupFooterBand
+        Background.Brush.Style = bsClear
+        HideWhenOneDetail = False
+        mmBottomOffset = 0
+        mmHeight = 0
+        mmPrintPosition = 0
       end
     end
   end

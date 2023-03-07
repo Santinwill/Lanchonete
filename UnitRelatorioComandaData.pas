@@ -28,6 +28,9 @@ type
     ppDBText2: TppDBText;
     ppLabel7: TppLabel;
     ppDBText3: TppDBText;
+    ppGroup1: TppGroup;
+    ppGroupHeaderBand1: TppGroupHeaderBand;
+    ppGroupFooterBand1: TppGroupFooterBand;
     procedure ButtonBuscarClick(Sender: TObject);
     procedure ButtonCancelarClick(Sender: TObject);
     procedure ButtonImprimirClick(Sender: TObject);

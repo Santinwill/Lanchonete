@@ -51,6 +51,10 @@ type
     ppDBText4: TppDBText;
     ppLabel9: TppLabel;
     ppDBText5: TppDBText;
+    ppGroup1: TppGroup;
+    ppGroupHeaderBand1: TppGroupHeaderBand;
+    ppGroupFooterBand1: TppGroupFooterBand;
+    ppLabel5: TppLabel;
     procedure ButtonBuscarCategoriaClick(Sender: TObject);
     procedure ButtonInserirClick(Sender: TObject);
     procedure ButtonAlterarClick(Sender: TObject);

@@ -85,12 +85,16 @@ begin
     FDQuery.ParamByName('STATUSCOMANDA').AsInteger := 0;
     LabelAtivoInativo.Caption := 'Comandas Fechadas';
     ButtonAlterar.Visible := False;
+    cxDBTextEdit3.Visible := false;
+    Label14.Visible := false;
   end
   else
   begin
     FDQuery.ParamByName('STATUSCOMANDA').AsInteger := 1;
     LabelAtivoInativo.Caption := 'Comandas Abertas';
     ButtonAlterar.Visible := True;
+    cxDBTextEdit3.Visible := true;
+    Label14.Visible := true;
   end;
   FDQuery.Open;
 end;
@@ -130,6 +134,8 @@ end;
 procedure TFormControleComanda.ButtonInserirClick(Sender: TObject);
 begin
   ButtonCancelarProduto.Visible := False;
+  cxDBTextEdit3.Visible := false;
+  Label14.Visible := false;
   ButtonInserirProduto.Visible := True;
   ButtonSelecionarComanda.Visible := True;
   inherited;
@@ -152,12 +158,11 @@ begin
       ShowMessage('Este produto está inativo.');
       exit;
     end;
-
-
     FDQuery.FieldByName('IDPRODUTO').AsInteger
     := form.FDQuery.FieldByName('IDPRODUTO').AsInteger;
     FDQuery.FieldByName('VLVENDA').AsFloat
     := form.FDQuery.FieldByName('VLVENDA').AsFloat;
+    cxDBTextEdit2.Text := form.FDQuery.FieldByName('NMPRODUTO').AsString;
   end;
   form.Free;
 end;
@@ -175,6 +180,7 @@ begin
   begin
     FDQuery.FieldByName('IDCOMANDA').AsInteger
     := form.FDQuery.FieldByName('IDCOMANDA').AsInteger;
+    cxDBSpinEdit1.Text := IntToStr(form.FDQuery.FieldByName('IDCOMANDA').AsInteger);
   end;
   form.Free;
 end;

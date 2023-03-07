@@ -1,5 +1,7 @@
 inherited FormCadastroCardapio: TFormCadastroCardapio
   Caption = 'Cadastro Card'#225'pio'
+  ExplicitWidth = 730
+  ExplicitHeight = 518
   PixelsPerInch = 96
   TextHeight = 13
   inherited PageControl: TPageControl
@@ -206,22 +208,23 @@ inherited FormCadastroCardapio: TFormCadastroCardapio
   inherited FDQuery: TFDQuery
     Active = True
     SQL.Strings = (
-      'SELECT PRODUTO.IDPRODUTO,'
-      '       PRODUTO.NMPRODUTO,'
-      '       PRODUTO.VLVENDA,'
-      '       PRODUTO.DESCRICAO,'
-      '       PRODUTO.IDTIPO,'
-      '       PRODUTO.FLSITUACAO,'
-      '       TIPO.IDTIPO,'
-      '       TIPO.NMCATEGORIA,'
-      '       TIPO.FLSITUACAO,'
-      '       SITUACAO.IDSITUACAO,'
-      '       SITUACAO.NMSITUACAO '
-      '  FROM PRODUTO'
-      '  JOIN TIPO'
-      '    ON PRODUTO.IDTIPO = TIPO.IDTIPO'
-      '  JOIN SITUACAO'
-      '    ON PRODUTO.FLSITUACAO = SITUACAO.IDSITUACAO')
+      '  SELECT PRODUTO.IDPRODUTO,'
+      '         PRODUTO.NMPRODUTO,'
+      '         PRODUTO.VLVENDA,'
+      '         PRODUTO.DESCRICAO,'
+      '         PRODUTO.IDTIPO,'
+      '         PRODUTO.FLSITUACAO,'
+      '         TIPO.IDTIPO,'
+      '         TIPO.NMCATEGORIA,'
+      '         TIPO.FLSITUACAO,'
+      '         SITUACAO.IDSITUACAO,'
+      '         SITUACAO.NMSITUACAO '
+      '    FROM PRODUTO'
+      '    JOIN TIPO'
+      '      ON PRODUTO.IDTIPO = TIPO.IDTIPO'
+      '    JOIN SITUACAO'
+      '      ON PRODUTO.FLSITUACAO = SITUACAO.IDSITUACAO'
+      ' ')
     Left = 584
     Top = 240
     object FDQueryidproduto: TLargeintField
@@ -433,23 +436,6 @@ inherited FormCadastroCardapio: TFormCadastroCardapio
         BandType = 0
         LayerName = Foreground
       end
-      object ppLabel8: TppLabel
-        UserName = 'Label5'
-        AutoSize = False
-        Caption = 'Categoria'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 12
-        Font.Style = []
-        Transparent = True
-        mmHeight = 4763
-        mmLeft = 121970
-        mmTop = 12699
-        mmWidth = 50000
-        BandType = 0
-        LayerName = Foreground
-      end
       object ppLabel9: TppLabel
         UserName = 'Label6'
         AutoSize = False
@@ -464,6 +450,40 @@ inherited FormCadastroCardapio: TFormCadastroCardapio
         mmLeft = 172773
         mmTop = 12700
         mmWidth = 22225
+        BandType = 0
+        LayerName = Foreground
+      end
+      object ppLabel5: TppLabel
+        UserName = 'Label3'
+        AutoSize = False
+        Caption = 'C'#243'd.'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4763
+        mmLeft = 1323
+        mmTop = 12965
+        mmWidth = 10054
+        BandType = 0
+        LayerName = Foreground
+      end
+      object ppLabel8: TppLabel
+        UserName = 'Label5'
+        AutoSize = False
+        Caption = 'Categoria'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4763
+        mmLeft = 121179
+        mmTop = 12700
+        mmWidth = 20902
         BandType = 0
         LayerName = Foreground
       end
@@ -525,24 +545,6 @@ inherited FormCadastroCardapio: TFormCadastroCardapio
         BandType = 4
         LayerName = Foreground
       end
-      object ppDBText4: TppDBText
-        UserName = 'DBText4'
-        DataField = 'nmcategoria'
-        DataPipeline = ppDBPipeline1
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 12
-        Font.Style = []
-        Transparent = True
-        DataPipelineName = 'ppDBPipeline1'
-        mmHeight = 4763
-        mmLeft = 121970
-        mmTop = 1323
-        mmWidth = 50000
-        BandType = 4
-        LayerName = Foreground
-      end
       object ppDBText5: TppDBText
         UserName = 'DBText5'
         DataField = 'nmsituacao'
@@ -558,6 +560,24 @@ inherited FormCadastroCardapio: TFormCadastroCardapio
         mmLeft = 172770
         mmTop = 1323
         mmWidth = 22225
+        BandType = 4
+        LayerName = Foreground
+      end
+      object ppDBText4: TppDBText
+        UserName = 'DBText4'
+        DataField = 'nmcategoria'
+        DataPipeline = ppDBPipeline1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'ppDBPipeline1'
+        mmHeight = 4763
+        mmLeft = 121179
+        mmTop = 1323
+        mmWidth = 50006
         BandType = 4
         LayerName = Foreground
       end
@@ -595,6 +615,33 @@ inherited FormCadastroCardapio: TFormCadastroCardapio
       inherited ppLabeltotalregistro: TppLabel
         SaveOrder = -1
         LayerName = Foreground
+      end
+    end
+    object ppGroup1: TppGroup [4]
+      BreakName = 'nmcategoria'
+      DataPipeline = ppDBPipeline1
+      GroupFileSettings.NewFile = False
+      GroupFileSettings.EmailFile = False
+      KeepTogether = True
+      OutlineSettings.CreateNode = True
+      StartOnOddPage = False
+      UserName = 'Group1'
+      mmNewColumnThreshold = 0
+      mmNewPageThreshold = 0
+      DataPipelineName = 'ppDBPipeline1'
+      NewFile = False
+      object ppGroupHeaderBand1: TppGroupHeaderBand
+        Background.Brush.Style = bsClear
+        mmBottomOffset = 0
+        mmHeight = 12171
+        mmPrintPosition = 0
+      end
+      object ppGroupFooterBand1: TppGroupFooterBand
+        Background.Brush.Style = bsClear
+        HideWhenOneDetail = False
+        mmBottomOffset = 0
+        mmHeight = 0
+        mmPrintPosition = 0
       end
     end
   end
