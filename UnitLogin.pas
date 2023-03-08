@@ -19,6 +19,7 @@ type
     ButtonCancelar: TButton;
     FDQuerylogin: TFDQuery;
     procedure ButtonEntrarClick(Sender: TObject);
+    procedure ButtonCancelarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -33,6 +34,11 @@ implementation
 {$R *.dfm}
 
 uses UnitPrincipal;
+
+procedure TFormLogin.ButtonCancelarClick(Sender: TObject);
+begin
+  close;
+end;
 
 procedure TFormLogin.ButtonEntrarClick(Sender: TObject);
 begin

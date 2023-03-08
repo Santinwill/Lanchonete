@@ -61,6 +61,7 @@ object FormLogin: TFormLogin
     Cancel = True
     Caption = 'Cancelar'
     TabOrder = 3
+    OnClick = ButtonCancelarClick
   end
   object FDQuerylogin: TFDQuery
     Active = True

@@ -60,15 +60,15 @@ end;
 
 procedure TFormCadastroGarcom.ButtonAlterarSituacaoGarcomClick(Sender: TObject);
 begin
-  if FDQuery.FieldByName('IDSTATUSGARCOM').AsInteger = 1 then
+  if FDQuery.FieldByName('IDSTATUSGARCOM').AsInteger = 2 then
   begin
-    FDQuery.FieldByName('IDSTATUSGARCOM').AsInteger := 0;
+    FDQuery.FieldByName('IDSTATUSGARCOM').AsInteger := 1;
     ShowMessage('Alterado para Inativo.');
     cxDBTextEdit2.Text := 'Inativo';
   end
   else
   begin
-    FDQuery.FieldByName('IDSTATUSGARCOM').AsInteger := 1;
+    FDQuery.FieldByName('IDSTATUSGARCOM').AsInteger := 2;
     ShowMessage('Alterado para Ativo.');
     cxDBTextEdit2.Text := 'Ativo';
   end;
@@ -88,7 +88,7 @@ procedure TFormCadastroGarcom.ButtonInserirClick(Sender: TObject);
 begin
   inherited;
   ButtonAlterarSituacaoGarcom.Visible := False;
-  FDQuery.FieldByName('IDSTATUSGARCOM').AsInteger := 1;
+  FDQuery.FieldByName('IDSTATUSGARCOM').AsInteger := 2;
 end;
 
 procedure TFormCadastroGarcom.FormCreate(Sender: TObject);

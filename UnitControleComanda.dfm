@@ -26,6 +26,9 @@ inherited FormControleComanda: TFormControleComanda
         end
       end
       inherited Panel2: TPanel
+        inherited ButtonImprimir: TButton
+          Visible = False
+        end
         inherited ButtonSelecionar: TButton
           Left = 539
           Visible = False
@@ -118,8 +121,6 @@ inherited FormControleComanda: TFormControleComanda
       end
     end
     inherited TabSheetCadastro: TTabSheet
-      ExplicitLeft = 8
-      ExplicitTop = 28
       object Label1: TLabel [0]
         Left = 16
         Top = 16

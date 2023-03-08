@@ -61,15 +61,15 @@ end;
 procedure TFormCadastroFormaPagamento.ButtonAlterarSituacaoFormpgmtClick(
   Sender: TObject);
 begin
-  if FDQuery.FieldByName('IDSTATUSFORMAPGMT').AsInteger = 1 then
+  if FDQuery.FieldByName('IDSTATUSFORMAPGMT').AsInteger = 2 then
   begin
-    FDQuery.FieldByName('IDSTATUSFORMAPGMT').AsInteger := 0;
+    FDQuery.FieldByName('IDSTATUSFORMAPGMT').AsInteger := 1;
     ShowMessage('Alterado para Inativo.');
     cxDBTextEdit2.Text := 'Inativo';
   end
   else
   begin
-    FDQuery.FieldByName('IDSTATUSFORMAPGMT').AsInteger := 1;
+    FDQuery.FieldByName('IDSTATUSFORMAPGMT').AsInteger := 2;
     ShowMessage('Alterado para Ativo.');
     cxDBTextEdit2.Text := 'Ativo';
   end;
@@ -89,7 +89,7 @@ procedure TFormCadastroFormaPagamento.ButtonInserirClick(Sender: TObject);
 begin
   inherited;
   ButtonAlterarSituacaoFormpgmt.Visible := False;
-  FDQuery.FieldByName('IDSTATUSFORMAPGMT').AsInteger := 1;
+  FDQuery.FieldByName('IDSTATUSFORMAPGMT').AsInteger := 2;
 end;
 
 procedure TFormCadastroFormaPagamento.FormCreate(Sender: TObject);

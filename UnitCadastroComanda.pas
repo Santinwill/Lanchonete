@@ -117,7 +117,7 @@ var
   form: TFormCadastroGarcom;
 begin
   form := TFormCadastroGarcom.Create(Self);
-  form.Base_FiltrosExtras := ' GARCOM.IDSTATUSGARCOM = 1 ';
+  form.Base_FiltrosExtras := ' GARCOM.IDSTATUSGARCOM = 2 ';
   form.ButtonSelecionar.Visible := True;
   form.ButtonImprimir.Enabled := False;
   form.ShowModal;

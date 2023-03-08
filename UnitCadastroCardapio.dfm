@@ -5,6 +5,7 @@ inherited FormCadastroCardapio: TFormCadastroCardapio
   PixelsPerInch = 96
   TextHeight = 13
   inherited PageControl: TPageControl
+    ActivePage = TabSheetCadastro
     inherited TabSheetConsulta: TTabSheet
       inherited Panel1: TPanel
         inherited LabelBuscar: TLabel

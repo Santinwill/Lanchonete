@@ -128,6 +128,7 @@ var
 begin
   form := TFormCadastroComanda.Create(Self);
   form.ButtonSelecionar.Visible := True;
+  form.ButtonImprimir.Visible := False;
   form.ShowModal;
   if form.ModalResult = mrOk then
   begin
@@ -142,6 +143,7 @@ var
 begin
   form := TFormCadastroCardapio.Create(Self);
   form.ButtonSelecionar.Visible := True;
+  form.ButtonImprimir.Visible := False;
   form.ShowModal;
   if form.ModalResult = mrOk then
   begin

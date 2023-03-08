@@ -5,6 +5,7 @@ inherited FormCadastroFormaPagamento: TFormCadastroFormaPagamento
   PixelsPerInch = 96
   TextHeight = 13
   inherited PageControl: TPageControl
+    ActivePage = TabSheetCadastro
     inherited TabSheetConsulta: TTabSheet
       inherited Panel2: TPanel
         inherited ButtonSelecionar: TButton

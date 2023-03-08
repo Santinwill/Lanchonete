@@ -61,15 +61,15 @@ end;
 procedure TFormCadastroCategoriaProduto.ButtonAlterarSituacaoClick(
   Sender: TObject);
 begin
-  if FDQuery.FieldByName('FLSITUACAO').AsInteger = 1 then
+  if FDQuery.FieldByName('FLSITUACAO').AsInteger = 2 then
   begin
-    FDQuery.FieldByName('FLSITUACAO').AsInteger := 0;
+    FDQuery.FieldByName('FLSITUACAO').AsInteger := 1;
     ShowMessage('Alterado para Inativo.');
     cxDBTextEdit2.Text := 'Inativo';
   end
   else
   begin
-    FDQuery.FieldByName('FLSITUACAO').AsInteger := 1;
+    FDQuery.FieldByName('FLSITUACAO').AsInteger := 2;
     ShowMessage('Alterado para Ativo.');
     cxDBTextEdit2.Text := 'Ativo';
   end;
@@ -88,7 +88,7 @@ procedure TFormCadastroCategoriaProduto.ButtonInserirClick(Sender: TObject);
 begin
   inherited;
   ButtonAlterarSituacao.Visible := False;
-  FDQuery.FieldByName('FLSITUACAO').AsInteger := 1;
+  FDQuery.FieldByName('FLSITUACAO').AsInteger := 2;
 end;
 
 procedure TFormCadastroCategoriaProduto.FormCreate(Sender: TObject);

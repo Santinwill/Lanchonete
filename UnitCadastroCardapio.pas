@@ -85,15 +85,15 @@ end;
 procedure TFormCadastroCardapio.ButtonAlterarSituacaoCardapioClick(
   Sender: TObject);
 begin
-  if FDQuery.FieldByName('FLSITUACAO').AsInteger = 1 then
+  if FDQuery.FieldByName('FLSITUACAO').AsInteger = 2 then
   begin
-    FDQuery.FieldByName('FLSITUACAO').AsInteger := 0;
+    FDQuery.FieldByName('FLSITUACAO').AsInteger := 1;
     ShowMessage('Alterado para Inativo.');
     cxDBTextEdit3.Text := 'Inativo';
   end
   else
   begin
-    FDQuery.FieldByName('FLSITUACAO').AsInteger := 1;
+    FDQuery.FieldByName('FLSITUACAO').AsInteger := 2;
     ShowMessage('Alterado para Ativo.');
     cxDBTextEdit3.Text := 'Ativo';
   end;
@@ -104,7 +104,7 @@ var
   form: TFormCadastroCategoriaProduto;
 begin
   form := TFormCadastroCategoriaProduto.Create(Self);
-  form.Base_FiltrosExtras := ' TIPO.FLSITUACAO = 1';
+  form.Base_FiltrosExtras := ' TIPO.FLSITUACAO = 2';
   form.ButtonSelecionar.Visible := True;
   form.ButtonImprimir.Enabled := False;
   form.ShowModal;
@@ -130,7 +130,7 @@ procedure TFormCadastroCardapio.ButtonInserirClick(Sender: TObject);
 begin
   inherited;
   ButtonAlterarSituacaoCardapio.Visible := False;
-  FDQuery.FieldByName('FLSITUACAO').AsInteger := 1;
+  FDQuery.FieldByName('FLSITUACAO').AsInteger := 2;
 end;
 
 procedure TFormCadastroCardapio.FormCreate(Sender: TObject);

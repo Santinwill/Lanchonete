@@ -43,6 +43,10 @@ inherited FormCadastroCategoriaProduto: TFormCadastroCategoriaProduto
       end
     end
     inherited TabSheetCadastro: TTabSheet
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label1: TLabel [0]
         Left = 16
         Top = 16

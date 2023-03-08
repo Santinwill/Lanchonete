@@ -72,6 +72,7 @@ var
 begin
   form := TFormCadastroGarcom.Create(Self);
   form.ButtonSelecionar.Visible := True;
+  form.ButtonImprimir.Visible := False;
   form.ShowModal;
   if form.ModalResult = mrOk then
   begin

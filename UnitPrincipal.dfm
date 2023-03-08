@@ -115,6 +115,13 @@ object FormPrincipal: TFormPrincipal
         OnClick = Multiseleo1Click
       end
     end
+    object Cardpio1: TMenuItem
+      Caption = 'Card'#225'pio'
+      object Visializar1: TMenuItem
+        Caption = 'Visializar'
+        OnClick = Visializar1Click
+      end
+    end
   end
   object FDConnection: TFDConnection
     Params.Strings = (

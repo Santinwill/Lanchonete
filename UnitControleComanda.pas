@@ -147,13 +147,13 @@ var
   form: TFormCadastroCardapio;
 begin
   form := TFormCadastroCardapio.Create(Self);
-  form.Base_FiltrosExtras := ' PRODUTO.FLSITUACAO = 1 ';
+  form.Base_FiltrosExtras := ' PRODUTO.FLSITUACAO = 2 ';
   form.ButtonSelecionar.Visible := True;
   form.ButtonImprimir.Enabled := False;
   form.ShowModal;
   if form.ModalResult = mrOk then
   begin
-    if form.FDQuery.FieldByName('flsituacao').AsInteger = 0 then
+    if form.FDQuery.FieldByName('flsituacao').AsInteger = 1 then
     begin
       ShowMessage('Este produto está inativo.');
       exit;

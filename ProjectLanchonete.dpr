@@ -19,7 +19,8 @@ uses
   UnitRelatorioVendasGarcom in 'UnitRelatorioVendasGarcom.pas' {FormRelatorioVendasGarcom},
   UnitRelatorioMultiselecao in 'UnitRelatorioMultiselecao.pas' {FormRelatorioMultiselecao},
   UnitLogin in 'UnitLogin.pas' {FormLogin},
-  UnitRelatorioItensComanda in 'UnitRelatorioItensComanda.pas' {FormRelatorioItensComanda};
+  UnitRelatorioItensComanda in 'UnitRelatorioItensComanda.pas' {FormRelatorioItensComanda},
+  UnitCardapio in 'UnitCardapio.pas' {FormCardapio};
 
 {$R *.res}
 
@@ -27,6 +28,5 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFormPrincipal, FormPrincipal);
-  Application.CreateForm(TFormRelatorioItensComanda, FormRelatorioItensComanda);
   Application.Run;
 end.
