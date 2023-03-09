@@ -23,10 +23,33 @@ type
     Label4: TLabel;
     ComboBoxSituacaoProd: TComboBox;
     ButtonBuscarProduto: TButton;
+    ppGroup1: TppGroup;
+    ppGroupHeaderBand1: TppGroupHeaderBand;
+    ppGroupFooterBand1: TppGroupFooterBand;
+    FDQueryRelatorioidproduto: TLargeintField;
+    FDQueryRelatorionmproduto: TWideStringField;
+    FDQueryRelatoriovlvenda: TBCDField;
+    FDQueryRelatoriodescricao: TWideMemoField;
+    FDQueryRelatorioidtipo: TLargeintField;
+    FDQueryRelatorioflsituacao: TLargeintField;
+    FDQueryRelatorioidtipo_1: TLargeintField;
+    FDQueryRelatorionmcategoria: TWideStringField;
+    FDQueryRelatorioflsituacao_1: TLargeintField;
+    FDQueryRelatorioidsituacao: TLargeintField;
+    FDQueryRelatorionmsituacao: TWideStringField;
+    ppDBText1: TppDBText;
+    ppDBText2: TppDBText;
+    ppDBText3: TppDBText;
+    ppLabel5: TppLabel;
+    ppDBText4: TppDBText;
+    ppDBMemo1: TppDBMemo;
+    ppDBText5: TppDBText;
     procedure FormCreate(Sender: TObject);
-    procedure ButtonBuscarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure ButtonBuscarProdutoClick(Sender: TObject);
+    procedure ComboBoxCategoriaSelect(Sender: TObject);
+    procedure ComboBoxSituacaoCatSelect(Sender: TObject);
+    procedure ComboBoxSituacaoProdSelect(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,6 +57,7 @@ type
     sql: string;
     base_sql: string;
     codProduto: Integer;
+    procedure Buscar;
     procedure categoria;
     procedure produto;
     procedure sitCategoria;
@@ -48,7 +72,7 @@ implementation
 
 uses UnitPrincipal, UnitCadastroCardapio;
 
-procedure TFormCardapio.ButtonBuscarClick(Sender: TObject);
+procedure TFormCardapio.Buscar;
 begin
   sql := base_sql;
   if ComboBoxCategoria.Text <> '' then
@@ -67,6 +91,7 @@ begin
   begin
     sql := sql + ' AND PRODUTO.IDPRODUTO = ' + IntToStr(codProduto);
   end;
+  sql := sql + ' ORDER BY TIPO.NMCATEGORIA ';
   FDQueryRelatorio.Close;
   FDQueryRelatorio.SQL.Text := sql;
   FDQueryRelatorio.Open;
@@ -77,9 +102,11 @@ begin
   if MessageDlg('Selecionar Produto?', mtConfirmation, [mbYes, mbNo], 0) = mrNo  then
   begin
     EditProduto.Text := '';
+    Buscar;
     Exit;
   end;
   produto;
+  Buscar;
 end;
 
 procedure TFormCardapio.categoria;
@@ -114,6 +141,21 @@ begin
 
 end;
 
+procedure TFormCardapio.ComboBoxCategoriaSelect(Sender: TObject);
+begin
+  Buscar;
+end;
+
+procedure TFormCardapio.ComboBoxSituacaoCatSelect(Sender: TObject);
+begin
+  Buscar;
+end;
+
+procedure TFormCardapio.ComboBoxSituacaoProdSelect(Sender: TObject);
+begin
+  Buscar;
+end;
+
 procedure TFormCardapio.FormCreate(Sender: TObject);
 begin
   base_sql := FDQueryRelatorio.SQL.Text;
@@ -123,6 +165,7 @@ procedure TFormCardapio.FormShow(Sender: TObject);
 begin
   categoria;
   sitCategoria;
+  Buscar;
 end;
 
 procedure TFormCardapio.produto;
