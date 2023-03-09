@@ -122,6 +122,10 @@ object FormPrincipal: TFormPrincipal
         OnClick = Visializar1Click
       end
     end
+    object CardpioviaCdigo1: TMenuItem
+      Caption = 'Card'#225'pio via C'#243'digo'
+      OnClick = CardpioviaCdigo1Click
+    end
   end
   object FDConnection: TFDConnection
     Params.Strings = (

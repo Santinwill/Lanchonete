@@ -20,7 +20,8 @@ uses
   UnitRelatorioMultiselecao in 'UnitRelatorioMultiselecao.pas' {FormRelatorioMultiselecao},
   UnitLogin in 'UnitLogin.pas' {FormLogin},
   UnitRelatorioItensComanda in 'UnitRelatorioItensComanda.pas' {FormRelatorioItensComanda},
-  UnitCardapio in 'UnitCardapio.pas' {FormCardapio};
+  UnitCardapio in 'UnitCardapio.pas' {FormCardapio},
+  UnitCardapioViaCod in 'UnitCardapioViaCod.pas' {FormCardapioViaCod};
 
 {$R *.res}
 
@@ -28,5 +29,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFormPrincipal, FormPrincipal);
+  Application.CreateForm(TFormCardapioViaCod, FormCardapioViaCod);
   Application.Run;
 end.

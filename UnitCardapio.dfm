@@ -84,7 +84,7 @@ inherited FormCardapio: TFormCardapio
       item
         Expanded = False
         FieldName = 'idproduto'
-        Width = 75
+        Width = 64
         Visible = True
       end
       item

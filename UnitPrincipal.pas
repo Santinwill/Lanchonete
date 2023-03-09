@@ -41,6 +41,7 @@ type
     ItensComanda1: TMenuItem;
     Cardpio1: TMenuItem;
     Visializar1: TMenuItem;
+    CardpioviaCdigo1: TMenuItem;
     procedure Garom2Click(Sender: TObject);
     procedure FormasdePagamento2Click(Sender: TObject);
     procedure Garom1Click(Sender: TObject);
@@ -58,6 +59,7 @@ type
     procedure FDConnectionBeforeConnect(Sender: TObject);
     procedure ItensComanda1Click(Sender: TObject);
     procedure Visializar1Click(Sender: TObject);
+    procedure CardpioviaCdigo1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -76,7 +78,16 @@ uses UnitCadastroGarcom, UnitCadastroFormaPagamento,
   UnitControleComanda, UnitPagamento, UnitRelatorioComandaData,
   UnitRelatorioMovimentacaoFinanceira, UnitRelatorioDetalhesPagamento,
   UnitRelatorioItens, UnitRelatorioVendasGarcom, UnitRelatorioMultiselecao,
-  UnitLogin, UnitRelatorioItensComanda, UnitCardapio;
+  UnitLogin, UnitRelatorioItensComanda, UnitCardapio, UnitCardapioViaCod;
+
+procedure TFormPrincipal.CardpioviaCdigo1Click(Sender: TObject);
+var
+  form: TFormCardapioViaCod;
+begin
+  form := TFormCardapioViaCod.Create(Self);
+  form.ShowModal;
+  form.Free;
+end;
 
 procedure TFormPrincipal.Comanda1Click(Sender: TObject);
 var
