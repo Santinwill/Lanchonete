@@ -41,6 +41,8 @@ inherited FormCardapio: TFormCardapio
       Top = 8
       Width = 130
       Height = 21
+      Color = clSkyBlue
+      ReadOnly = True
       TabOrder = 1
     end
     object ComboBoxCategoria: TComboBox
