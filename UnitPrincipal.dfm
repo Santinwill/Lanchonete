@@ -36,6 +36,7 @@ object FormPrincipal: TFormPrincipal
       Caption = 'Cadastro'
       object Comandas1: TMenuItem
         Caption = 'Comanda'
+        ShortCut = 8241
         OnClick = Comandas1Click
       end
       object N1: TMenuItem
@@ -43,10 +44,12 @@ object FormPrincipal: TFormPrincipal
       end
       object Produto1: TMenuItem
         Caption = 'Card'#225'pio'
+        ShortCut = 8242
         OnClick = Produto1Click
       end
       object Garom1: TMenuItem
         Caption = 'Categoria de Produtos'
+        ShortCut = 8243
         OnClick = Garom1Click
       end
       object CategoriadeProdutos1: TMenuItem
@@ -54,6 +57,7 @@ object FormPrincipal: TFormPrincipal
       end
       object Garom2: TMenuItem
         Caption = 'Gar'#231'om'
+        ShortCut = 8244
         OnClick = Garom2Click
       end
       object FormasdePagamento1: TMenuItem
@@ -61,6 +65,7 @@ object FormPrincipal: TFormPrincipal
       end
       object FormasdePagamento2: TMenuItem
         Caption = 'Formas de Pagamento'
+        ShortCut = 8245
         OnClick = FormasdePagamento2Click
       end
     end
@@ -68,6 +73,7 @@ object FormPrincipal: TFormPrincipal
       Caption = 'Controle'
       object Comanda1: TMenuItem
         Caption = 'Comanda'
+        ShortCut = 8259
         OnClick = Comanda1Click
       end
       object N2: TMenuItem
@@ -75,6 +81,7 @@ object FormPrincipal: TFormPrincipal
       end
       object FechamentoComanda1: TMenuItem
         Caption = 'Fechamento Comanda'
+        ShortCut = 8262
         OnClick = FechamentoComanda1Click
       end
     end
@@ -119,12 +126,17 @@ object FormPrincipal: TFormPrincipal
       Caption = 'Card'#225'pio'
       object Visializar1: TMenuItem
         Caption = 'Visializar'
+        ShortCut = 8278
         OnClick = Visializar1Click
       end
     end
     object CardpioviaCdigo1: TMenuItem
       Caption = 'Card'#225'pio via C'#243'digo'
-      OnClick = CardpioviaCdigo1Click
+      object CardpioviaCdigo2: TMenuItem
+        Caption = 'Card'#225'pio via C'#243'digo'
+        ShortCut = 16470
+        OnClick = CardpioviaCdigo2Click
+      end
     end
   end
   object FDConnection: TFDConnection

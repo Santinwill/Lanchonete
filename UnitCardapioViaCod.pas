@@ -52,6 +52,7 @@ type
     ppDBText5: TppDBText;
     ppDBMemo1: TppDBMemo;
     ppLine2: TppLine;
+    ppLine3: TppLine;
     procedure FormCreate(Sender: TObject);
     procedure ButtonCancelarClick(Sender: TObject);
     procedure ButtonBuscarClick(Sender: TObject);
@@ -173,12 +174,12 @@ end;
 procedure TFormCardapioViaCod.FormCreate(Sender: TObject);
 begin
   ConfiguraConexao;
-//  FormCardapioViaCod.Position := poDesktopCenter;
   Buscar;
   Categoria;
   Situacao;
   ItenGrid;
 
+  DBGrid.ReadOnly := True;
   ButtonCancelar.OnClick := ButtonCancelarClick;
   ButtonCancelar.Cancel := True;
   ButtonBuscar.OnClick := ButtonBuscarClick;
@@ -292,7 +293,7 @@ begin
   begin
     sql := sql + ' AND PRODUTO.IDPRODUTO = ' + IntToStr(codProduto);
   end;
-  sql := sql + ' ORDER BY TIPO.NMCATEGORIA ';
+  sql := sql + ' ORDER BY TIPO.NMCATEGORIA, PRODUTO.NMPRODUTO ';
   FDQuery.Close;
   FDQuery.SQL.Text := sql;
   FDQuery.Open;

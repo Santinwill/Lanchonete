@@ -216,7 +216,7 @@ object FormCardapioViaCod: TFormCardapioViaCod
       Background1.Brush.Style = bsClear
       Background2.Brush.Style = bsClear
       mmBottomOffset = 0
-      mmHeight = 13494
+      mmHeight = 16669
       mmPrintPosition = 0
       object ppDBText2: TppDBText
         UserName = 'DBText2'
@@ -265,7 +265,7 @@ object FormCardapioViaCod: TFormCardapioViaCod
         ParentDataPipeline = False
         Transparent = True
         DataPipelineName = 'ppDBPipeline'
-        mmHeight = 4498
+        mmHeight = 5821
         mmLeft = 25135
         mmTop = 1852
         mmWidth = 50000
@@ -325,7 +325,7 @@ object FormCardapioViaCod: TFormCardapioViaCod
         RemoveEmptyLines = False
         Transparent = True
         DataPipelineName = 'ppDBPipeline'
-        mmHeight = 10319
+        mmHeight = 12435
         mmLeft = 79111
         mmTop = 1852
         mmWidth = 76200
@@ -460,8 +460,19 @@ object FormCardapioViaCod: TFormCardapioViaCod
           Weight = 0.750000000000000000
           mmHeight = 1058
           mmLeft = 0
-          mmTop = 529
-          mmWidth = 199232
+          mmTop = 0
+          mmWidth = 197112
+          BandType = 3
+          GroupNo = 0
+          LayerName = Foreground
+        end
+        object ppLine3: TppLine
+          UserName = 'Line3'
+          Weight = 0.750000000000000000
+          mmHeight = 1058
+          mmLeft = 0
+          mmTop = 9262
+          mmWidth = 197115
           BandType = 3
           GroupNo = 0
           LayerName = Foreground
