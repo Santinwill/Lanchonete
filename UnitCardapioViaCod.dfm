@@ -35,7 +35,7 @@ object FormCardapioViaCod: TFormCardapioViaCod
       Left = 48
       Top = 54
       Width = 91
-      Height = 15
+      Height = 13
       Caption = 'Situa'#231#227'o Categoria'
     end
     object Label3: TLabel
@@ -50,7 +50,7 @@ object FormCardapioViaCod: TFormCardapioViaCod
       Left = 416
       Top = 54
       Width = 82
-      Height = 15
+      Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Situa'#231#227'o Produto'
     end
@@ -105,9 +105,6 @@ object FormCardapioViaCod: TFormCardapioViaCod
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitLeft = 304
-    ExplicitTop = 256
-    ExplicitWidth = 185
     DesignSize = (
       776
       41)
@@ -142,11 +139,6 @@ object FormCardapioViaCod: TFormCardapioViaCod
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
-  end
-  object ppDBPipeline1: TppDBPipeline
-    UserName = 'DBPipeline'
-    Left = 384
-    Top = 320
   end
   object ppReport: TppReport
     PrinterSetup.BinName = 'Default'
@@ -199,5 +191,46 @@ object FormCardapioViaCod: TFormCardapioViaCod
     Top = 264
     Version = '15.04'
     mmColumnWidth = 0
+    object ppHeaderBand1: TppHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 13229
+      mmPrintPosition = 0
+    end
+    object ppDetailBand1: TppDetailBand
+      Background1.Brush.Style = bsClear
+      Background2.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 13229
+      mmPrintPosition = 0
+    end
+    object ppFooterBand1: TppFooterBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 13229
+      mmPrintPosition = 0
+    end
+    object ppDesignLayers1: TppDesignLayers
+      object ppDesignLayer1: TppDesignLayer
+        UserName = 'Foreground'
+        LayerType = ltBanded
+        Index = 0
+      end
+    end
+    object ppParameterList1: TppParameterList
+    end
+  end
+  object FDQuery: TFDQuery
+    Left = 256
+    Top = 232
+  end
+  object DataSource: TDataSource
+    Left = 248
+    Top = 304
+  end
+  object ppDBPipeline: TppDBPipeline
+    UserName = 'DBPipeline'
+    Left = 376
+    Top = 344
   end
 end
